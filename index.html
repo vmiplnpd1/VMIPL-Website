@@ -143,38 +143,77 @@
 @media(max-width:850px){#vm-about-infrastructure .vm-five-grid,#vm-about-quality .vm-five-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:540px){#vm-about-infrastructure .vm-five-grid,#vm-about-quality .vm-five-grid{grid-template-columns:1fr}}
 </style><style id="vm-scroll-animations">
-/* === Professional Scroll Animations === */
-@keyframes vm-fade-up{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
-@keyframes vm-fade-in{from{opacity:0}to{opacity:1}}
-@keyframes vm-slide-left{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
-@keyframes vm-slide-right{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
-@keyframes vm-scale-in{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
-@keyframes vm-counter-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+/* === Unified Professional Section & Element Arrival Animations === */
+@keyframes vm-section-enter {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
-/* Base hidden state for all animatable elements */
-#vmipl-site.vm-anim-ready .vm-anim{opacity:0;will-change:opacity,transform}
+@keyframes vm-fade-up {
+  0% { opacity: 0; transform: translateY(28px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
-/* Triggered states */
-#vmipl-site.vm-anim-ready .vm-anim.vm-visible{animation-fill-mode:both;animation-timing-function:cubic-bezier(.22,.61,.36,1)}
+@keyframes vm-scale-in {
+  0% { opacity: 0; transform: scale(0.94); }
+  100% { opacity: 1; transform: scale(1); }
+}
 
-/* Animation types */
-#vmipl-site.vm-anim-ready .vm-anim-fade-up.vm-visible{animation-name:vm-fade-up;animation-duration:.7s}
-#vmipl-site.vm-anim-ready .vm-anim-fade-in.vm-visible{animation-name:vm-fade-in;animation-duration:.65s}
-#vmipl-site.vm-anim-ready .vm-anim-slide-left.vm-visible{animation-name:vm-slide-left;animation-duration:.7s}
-#vmipl-site.vm-anim-ready .vm-anim-slide-right.vm-visible{animation-name:vm-slide-right;animation-duration:.7s}
-#vmipl-site.vm-anim-ready .vm-anim-scale-in.vm-visible{animation-name:vm-scale-in;animation-duration:.6s}
-#vmipl-site.vm-anim-ready .vm-anim-counter.vm-visible{animation-name:vm-counter-up;animation-duration:.5s}
+@keyframes vm-slide-left {
+  0% { opacity: 0; transform: translateX(-35px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
 
-/* Stagger delays for grids */
-#vmipl-site.vm-anim-ready .vm-stagger-1{animation-delay:.1s}
-#vmipl-site.vm-anim-ready .vm-stagger-2{animation-delay:.2s}
-#vmipl-site.vm-anim-ready .vm-stagger-3{animation-delay:.3s}
-#vmipl-site.vm-anim-ready .vm-stagger-4{animation-delay:.4s}
-#vmipl-site.vm-anim-ready .vm-stagger-5{animation-delay:.5s}
-#vmipl-site.vm-anim-ready .vm-stagger-6{animation-delay:.55s}
-#vmipl-site.vm-anim-ready .vm-stagger-7{animation-delay:.6s}
-#vmipl-site.vm-anim-ready .vm-stagger-8{animation-delay:.65s}
-#vmipl-site.vm-anim-ready .vm-stagger-9{animation-delay:.7s}
+@keyframes vm-slide-right {
+  0% { opacity: 0; transform: translateX(35px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Section-level arrival animation */
+#vmipl-site.vm-anim-ready section,
+#vmipl-site.vm-anim-ready footer {
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+#vmipl-site.vm-anim-ready section:not(.vm-section-visible),
+#vmipl-site.vm-anim-ready footer:not(.vm-section-visible) {
+  opacity: 0;
+  transform: translateY(35px);
+}
+
+#vmipl-site.vm-anim-ready section.vm-section-visible,
+#vmipl-site.vm-anim-ready footer.vm-section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Inner elements transition smoothly when the section arrives */
+#vmipl-site.vm-anim-ready .vm-anim {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-anim.vm-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#vmipl-site.vm-anim-ready .vm-anim-scale.vm-visible {
+  transform: scale(1) !important;
+}
+
+/* Stagger delays for child cards inside arrived sections */
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-stagger-1 { transition-delay: 0.08s; }
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-stagger-2 { transition-delay: 0.16s; }
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-stagger-3 { transition-delay: 0.24s; }
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-stagger-4 { transition-delay: 0.32s; }
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-stagger-5 { transition-delay: 0.40s; }
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-stagger-6 { transition-delay: 0.48s; }
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-stagger-7 { transition-delay: 0.54s; }
+#vmipl-site.vm-anim-ready section.vm-section-visible .vm-stagger-8 { transition-delay: 0.60s; }
 
 /* === Image Lightbox === */
 .vm-lightbox-overlay{position:fixed;inset:0;z-index:100000;background:rgba(10,25,30,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease;cursor:zoom-out}
@@ -185,16 +224,15 @@
 .vm-lightbox-close:hover{background:rgba(255,255,255,.25);transform:scale(1.1)}
 .vm-lightbox-caption{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.85);font-size:14px;font-weight:500;text-align:center;max-width:80vw;padding:8px 18px;background:rgba(0,0,0,.35);border-radius:6px}
 
-/* Clickable image cursors */
+/* Clickable image styling */
 #vmipl-site .vm-clickable-img{cursor:zoom-in;transition:transform .25s ease,box-shadow .25s ease}
 #vmipl-site .vm-clickable-img:hover{transform:scale(1.03);box-shadow:0 8px 28px rgba(0,0,0,.12)}
 
-/* Respect reduced motion */
 @media(prefers-reduced-motion:reduce){
-  #vmipl-site.vm-anim-ready .vm-anim{opacity:1!important;transform:none!important;animation:none!important}
-  .vm-lightbox-overlay,.vm-lightbox-overlay img{transition:none!important}
-}
-</style>
+  #vmipl-site.vm-anim-ready section, #vmipl-site.vm-anim-ready footer, #vmipl-site.vm-anim-ready .vm-anim {
+    opacity: 1 !important; transform: none !important; transition: none !important;
+  }
+}</style>
 <style id="vm-home-capability-image-corrections">
 /* Home / WHAT WE DO: only replace the six background photos. Original tile sizing and layout untouched. */
 #vmipl-site #vm-capabilities .vm-cap-grid > .vm-cap-card:nth-child(1) { --vm-cap-photo:url("assets/machine-gallery/03-laser-cutting-machine.webp") !important; }
@@ -1605,85 +1643,70 @@ window.location.href=url;
  }
 })();
 </script><script>(function(){var links=document.querySelectorAll('a[download="VMIPL_Company_Brochure.pdf"]');links.forEach(function(a){a.addEventListener('click',function(e){try{e.preventDefault();var raw=a.href.split(',')[1];var binary=atob(raw);var bytes=new Uint8Array(binary.length);for(var i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);var blob=new Blob([bytes],{type:'application/pdf'});var u=URL.createObjectURL(blob);var temp=document.createElement('a');temp.href=u;temp.download='VMIPL_Company_Brochure.pdf';document.body.appendChild(temp);temp.click();temp.remove();setTimeout(function(){URL.revokeObjectURL(u)},60000)}catch(err){window.open(a.href,'_blank')}})})})();</script><script>
-/* === Professional Section Animations === */
+/* === Section Arrival & Scroll Motion Engine === */
 (function(){
-  var site=document.getElementById('vmipl-site');
-  if(!site||!('IntersectionObserver' in window))return;
-  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var site = document.getElementById('vmipl-site');
+  if(!site || !('IntersectionObserver' in window)) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
 
-  /* Animation assignment rules */
-  var rules=[
-    {sel:'.vm-five-kicker, .vm-home-added-eyebrow, .vm-industries-eyebrow, .vm-page-kicker, .vm-cap-kicker, .ab-kicker, .vm-why-kicker',anim:'vm-anim-fade-in'},
-    {sel:'section h2, .vm-cap-heading, .vm-five-section h2, .ab-intro h1, .vm-subhero h1, .vm-final-cta h2',anim:'vm-anim-fade-up'},
-    {sel:'section > .vm-five-wrap > p, section p.vm-home-added-desc, .ab-intro-text, .vm-subhero p, .vm-contact-intro p',anim:'vm-anim-fade-up'},
-    {sel:'.vm-cap-card, .vm-cap-tile',anim:'vm-anim-scale-in',stagger:true},
-    {sel:'.vm-five-grid article',anim:'vm-anim-fade-up',stagger:true},
-    {sel:'.vm-product-photo-tile',anim:'vm-anim-scale-in',stagger:true},
-    {sel:'.vm-real-photo-gallery figure',anim:'vm-anim-fade-up',stagger:true},
-    {sel:'.vm-home-workflow-step',anim:'vm-anim-slide-left',stagger:true},
-    {sel:'.vm-industries-card',anim:'vm-anim-fade-up',stagger:true},
-    {sel:'.vm-why-card, .vm-why-stat',anim:'vm-anim-fade-up',stagger:true},
-    {sel:'.ab-purpose-card',anim:'vm-anim-fade-up',stagger:true},
-    {sel:'.ab-leader-card',anim:'vm-anim-scale-in',stagger:true},
-    {sel:'.vm-contact-form-card',anim:'vm-anim-slide-left'},
-    {sel:'.vm-contact-reach-grid article',anim:'vm-anim-fade-up',stagger:true},
-    {sel:'.vm-contact-map',anim:'vm-anim-fade-in'},
-    {sel:'.vm-five-button, .vm-final-cta a, .ab-next a',anim:'vm-anim-fade-up'},
-    {sel:'.vm-cap-detail',anim:'vm-anim-fade-up'},
-    {sel:'.vm-cap-detail-image',anim:'vm-anim-slide-right'},
-    {sel:'.vm-footer',anim:'vm-anim-fade-in'},
-    {sel:'.vm-home-product-card',anim:'vm-anim-scale-in',stagger:true},
-    {sel:'.vm-banner',anim:'vm-anim-fade-in'}
-  ];
+  var sections = site.querySelectorAll('section, footer');
 
-  var tagged=new Set();
-  rules.forEach(function(rule){
-    var els=site.querySelectorAll(rule.sel);
-    var staggerIdx=0;
-    els.forEach(function(el){
-      if(tagged.has(el))return;
-      if(el.closest('.vm-header,.vm-scroll-header'))return;
-      tagged.add(el);
-      el.classList.add('vm-anim',rule.anim);
-      if(rule.stagger){
-        staggerIdx++;
-        el.classList.add('vm-stagger-'+Math.min(staggerIdx,9));
-      }
+  // Tag inner elements with staggered animations
+  sections.forEach(function(sec){
+    var cards = sec.querySelectorAll('.vm-cap-card, .vm-product-photo-tile, .vm-five-grid article, .vm-real-photo-gallery figure, .vm-industries-card, .vm-why-card, .ab-purpose-card, .ab-leader-card, .vm-home-workflow-step');
+    cards.forEach(function(card, idx){
+      card.classList.add('vm-anim', 'vm-stagger-' + Math.min(idx + 1, 8));
+    });
+
+    var textHeaders = sec.querySelectorAll('h1, h2, .vm-five-kicker, .vm-page-kicker, .vm-home-added-eyebrow, .ab-kicker, .vm-quality-badge-banner, table');
+    textHeaders.forEach(function(el){
+      el.classList.add('vm-anim');
     });
   });
 
-  /* Also catch any remaining sections/headings not covered by rules */
-  site.querySelectorAll('section h3, section .vm-cap-newintro-nav a').forEach(function(el){
-    if(tagged.has(el)||el.closest('.vm-header,.vm-scroll-header'))return;
-    tagged.add(el);
-    el.classList.add('vm-anim','vm-anim-fade-up');
-  });
-
-  /* Observer */
-  var observer=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.classList.add('vm-visible');
-        observer.unobserve(e.target);
+  // Section Arrival Observer
+  var sectionObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('vm-section-visible');
+        // Activate inner children
+        entry.target.querySelectorAll('.vm-anim').forEach(function(child){
+          child.classList.add('vm-visible');
+        });
+        sectionObserver.unobserve(entry.target);
       }
     });
-  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
 
-  site.querySelectorAll('.vm-anim').forEach(function(el){
-    if(el.getBoundingClientRect().top<window.innerHeight*0.85){
-      el.classList.add('vm-visible');
-    }else{
-      observer.observe(el);
+  sections.forEach(function(sec){
+    // If already in top of viewport on initial load
+    var rect = sec.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.88 && rect.bottom > 0){
+      sec.classList.add('vm-section-visible');
+      sec.querySelectorAll('.vm-anim').forEach(function(child){
+        child.classList.add('vm-visible');
+      });
+    } else {
+      sectionObserver.observe(sec);
     }
   });
 
   site.classList.add('vm-anim-ready');
 
-  /* On view change, instantly reveal elements already in viewport */
-  window.addEventListener('hashchange',function(){
+  // Re-check visibility on page navigation / hashchange
+  window.addEventListener('hashchange', function(){
     requestAnimationFrame(function(){
-      site.querySelectorAll('.vm-anim:not(.vm-visible)').forEach(function(el){
-        if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('vm-visible');
+      sections.forEach(function(sec){
+        var r = sec.getBoundingClientRect();
+        if(r.top < window.innerHeight * 0.9 && r.bottom > 0){
+          sec.classList.add('vm-section-visible');
+          sec.querySelectorAll('.vm-anim').forEach(function(child){
+            child.classList.add('vm-visible');
+          });
+        }
       });
     });
   });
