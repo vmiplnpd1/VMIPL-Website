@@ -21,3 +21,4 @@ Host: https://vmiplnpd1.github.io/VMIPL-Website/
 
 # XML Sitemaps
 Sitemap: https://vmiplnpd1.github.io/VMIPL-Website/sitemap.xml
+

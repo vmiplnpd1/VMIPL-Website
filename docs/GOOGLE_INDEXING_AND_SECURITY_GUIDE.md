@@ -81,3 +81,4 @@ To get your website indexed by Google and rank #1 for **"Vijaya Manohar Industri
    - Defensive HTML5 input constraints (`maxlength`, regex `pattern`) prevent buffer flooding or malformed input attempts.
 8. **Credential & Secret Cleanliness:**
    - Zero API tokens, passwords, private keys, or credentials exist in the codebase.
+
