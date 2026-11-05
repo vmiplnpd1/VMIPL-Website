@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en"><head>
 <meta charset="utf-8"/>
@@ -2465,7 +2465,7 @@ window.addEventListener('hashchange', function(){
   };
 
   function updateDynamicSeo(){
-    var hash = (window.location.hash || '').replace(/^#/?/, '').toLowerCase();
+    var hash = (window.location.hash || '').replace(/^#[/]?/, '').toLowerCase();
     var metaDesc = document.querySelector('meta[name="description"]');
     var found = seoMap[hash] || seoMap[hash.split('/')[0]] || seoMap['home'];
     if(found){
