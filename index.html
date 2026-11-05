@@ -358,9 +358,12 @@
 }
 </style><style>
 /* Presentation-ready leadership: intentional monogram design, no photo placeholders */
-#vmipl-site .ab-leader-portrait{min-height:320px;height:340px;position:relative;overflow:hidden;background:#152c36}
-#vmipl-site .ab-leader-portrait img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .4s ease}
-#vmipl-site .ab-leader-card:hover .ab-leader-portrait img{transform:scale(1.04)}
+#vmipl-site .ab-leader-portrait{width:100%;min-height:380px;height:420px;position:relative;overflow:hidden;background:#eaf0ee;display:flex;align-items:center;justify-content:center}
+#vmipl-site .ab-leader-portrait img{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block;transition:transform .35s ease}
+#vmipl-site .ab-leader-card:hover .ab-leader-portrait img{transform:scale(1.02)}
+@media(max-width:700px){
+  #vmipl-site .ab-leader-portrait{min-height:300px;height:340px}
+}
 #vmipl-site .ab-portrait-mark{font-size:clamp(38px,5vw,68px)!important;font-weight:700!important;letter-spacing:.08em!important}
 #vmipl-site .vm-contact-verified-address{line-height:1.7!important}
 </style><style>
