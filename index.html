@@ -357,19 +357,81 @@
 #vmipl-site #vm-about-infrastructure .vm-five-grid,#vmipl-site #vm-about-quality .vm-five-grid {grid-template-columns:1fr!important;}
 }
 </style><style>
-/* Presentation-ready leadership: intentional monogram design, no photo placeholders */
-#vmipl-site .ab-leader-portrait{width:100%;height:440px;position:relative;overflow:hidden;background:transparent;border:none !important;padding:0 !important;margin:0 !important}
-#vmipl-site .ab-leader-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;border:none !important;outline:none !important;transition:transform .4s ease}
-#vmipl-site .ab-leader-card:hover .ab-leader-portrait img{transform:scale(1.03)}
-@media(max-width:767px){
-  #vmipl-site .ab-leader-portrait{height:360px !important}
+/* Presentation-ready leadership styling: 100% full frame borderless images */
+#vmipl-site .ab-leadership-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 28px !important;
 }
-#vmipl-site .ab-leader-portrait img{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block;transition:transform .35s ease}
-#vmipl-site .ab-leader-card:hover .ab-leader-portrait img{transform:scale(1.02)}
-@media(max-width:700px){
-  #vmipl-site .ab-leader-portrait{min-height:300px;height:340px}
+#vmipl-site .ab-leader-card {
+  background: #ffffff !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 10px 32px rgba(12, 35, 42, 0.08) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-#vmipl-site .ab-portrait-mark{font-size:clamp(38px,5vw,68px)!important;font-weight:700!important;letter-spacing:.08em!important}
+#vmipl-site .ab-leader-portrait {
+  width: 100% !important;
+  height: 480px !important;
+  min-height: 480px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  overflow: hidden !important;
+  display: block !important;
+  position: relative !important;
+}
+#vmipl-site .ab-leader-portrait::before,
+#vmipl-site .ab-leader-portrait::after {
+  display: none !important;
+  content: none !important;
+}
+#vmipl-site .ab-leader-photo,
+#vmipl-site .ab-leader-portrait img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: transform 0.4s ease !important;
+}
+#vmipl-site .ab-leader-md {
+  object-position: center 15% !important;
+}
+#vmipl-site .ab-leader-ph {
+  object-position: center 20% !important;
+}
+#vmipl-site .ab-leader-card:hover .ab-leader-portrait img {
+  transform: scale(1.03) !important;
+}
+@media(max-width: 900px) {
+  #vmipl-site .ab-leader-portrait {
+    height: 420px !important;
+    min-height: 420px !important;
+  }
+}
+@media(max-width: 700px) {
+  #vmipl-site .ab-leadership-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  #vmipl-site .ab-leader-portrait {
+    height: 380px !important;
+    min-height: 380px !important;
+  }
+}
+#vmipl-site .ab-portrait-mark{display:none!important}
 #vmipl-site .vm-contact-verified-address{line-height:1.7!important}
 </style><style>
 #vmipl-site .vm-confirmed-phone{margin:8px 0 0;font-weight:650;letter-spacing:.01em}
@@ -387,71 +449,6 @@
 }
 #vmipl-site .vm-contact-map .vm-map-address-overlay:hover{color:#9b712c}
 @media(max-width:600px){#vmipl-site .vm-contact-map .vm-map-address-overlay{font-size:11px;max-width:210px;padding:8px 10px}}
-</style><style id="vm-leadership-perfect-fit">
-/* === 100% Full-Frame Borderless Leadership Image Engine === */
-#vmipl-site .ab-leader-card {
-  background: #ffffff !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: 0 10px 30px rgba(15, 35, 45, 0.08) !important;
-  border-radius: 12px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-}
-
-#vmipl-site .ab-leader-portrait {
-  width: 100% !important;
-  height: 460px !important;
-  min-height: 460px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  background: none !important;
-  background-color: transparent !important;
-  border: none !important;
-  outline: none !important;
-  overflow: hidden !important;
-  display: block !important;
-}
-
-#vmipl-site .ab-leader-portrait:after,
-#vmipl-site .ab-leader-portrait:before {
-  display: none !important;
-  content: none !important;
-}
-
-#vmipl-site .ab-leader-portrait img {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: cover !important;
-  object-position: center 12% !important;
-  display: block !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  transition: transform 0.4s ease !important;
-}
-
-#vmipl-site .ab-leader-card:hover .ab-leader-portrait img {
-  transform: scale(1.03) !important;
-}
-
-@media(max-width: 900px) {
-  #vmipl-site .ab-leader-portrait {
-    height: 400px !important;
-    min-height: 400px !important;
-  }
-}
-
-@media(max-width: 600px) {
-  #vmipl-site .ab-leader-portrait {
-    height: 360px !important;
-    min-height: 360px !important;
-  }
-}
 </style>
 </head><body style="margin:0"><div id="vmipl-site"><style>
 #vmipl-site{width:100%;font-family:Arial,Helvetica,sans-serif;color:#fff}#vmipl-site *{box-sizing:border-box}
@@ -481,104 +478,231 @@
 #vmipl-site .vm-hero p{max-width:620px;margin:0 0 28px;color:#f1f3f5;font-size:17px;line-height:1.7}
 #vmipl-site .vm-hero-btn{display:inline-flex;align-items:center;gap:30px;padding:15px 23px;background:#e5ad35;color:#142431!important;text-decoration:none!important;font-size:14px;font-weight:700;transition:.25s}
 #vmipl-site .vm-hero-btn:hover{background:#fff}
-#vmipl-site .vm-menu-toggle{display:none;background:transparent;border:0;color:#fff;font-size:30px;cursor:pointer}
+#vmipl-site .vm-menu-toggle{display:none;background:transparent;border:0;color:#fff;font-size:30px;cursor:pointer;padding:4px 8px}
 @media(max-width:1400px){
-  #vmipl-site .vm-header-inner{min-height:75px}
-  #vmipl-site .vm-menu-toggle{display:block}
-  #vmipl-site .vm-nav{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    right:0;
-    padding:28px 24px 34px;
-    background:#ffffff !important;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    text-align:center;
-    gap:0;
-    max-height:85vh;
-    overflow-y:auto;
-    z-index:99999;
-    box-shadow:0 20px 45px rgba(10,30,38,.18);
-    border-top:3px solid #d4a034;
-  }
-  #vmipl-site .vm-nav.vm-open{display:flex}
-  
-  #vmipl-site .vm-nav > a,
-  #vmipl-site .vm-dropdown {
-    width:100%;
-    max-width:340px;
-    margin:0 auto;
-    text-align:center;
-  }
-
-  #vmipl-site .vm-nav > a,
-  #vmipl-site .vm-dropdown-label{
-    display:flex !important;
-    align-items:center;
-    justify-content:center;
-    padding:16px 0;
-    border-bottom:1px solid #e8eeec;
-    font-size:17px;
-    font-weight:750;
-    color:#0a1e27 !important; font-size:17px !important; font-weight:800 !important;
-    cursor:pointer;
-    text-align:center;
-    transition:color .2s;
-  }
-  
-  #vmipl-site .vm-nav > a:hover,
-  #vmipl-site .vm-dropdown-label:hover{
-    color:#ad7c1e !important;
-  }
-
-  /* In mobile: Hide sub-menus by default. Only reveal when parent dropdown has .vm-open-sub */
-  #vmipl-site .vm-dropdown-menu{
-    display:none !important;
-    position:static !important;
-    background:#f4f8f7 !important;
-    box-shadow:none !important;
-    border:1px solid #e1ebe8 !important;
-    border-radius:8px !important;
-    padding:8px 14px !important;
-    margin:10px auto 14px !important;
-    width:100% !important;
-    text-align:center !important;
-  }
-  #vmipl-site .vm-dropdown.vm-open-sub .vm-dropdown-menu{display:block !important}
-  
-  /* Toggle indicator arrow on mobile */
-  #vmipl-site .vm-dropdown-label::after{
-    content:"▼";
-    font-size:11px;
-    margin-left:10px;
-    transition:transform .25s ease;
-    color:#ad7c1e;
-  }
-  #vmipl-site .vm-dropdown.vm-open-sub .vm-dropdown-label::after{
-    transform:rotate(180deg);
-  }
-  
-  #vmipl-site .vm-dropdown-menu a{
-    display:block !important;
-    padding:11px 0 !important;
-    font-size:14px !important;
-    font-weight:600 !important;
-    color:#0e2630 !important; font-size:14.5px !important; font-weight:750 !important;
-    text-align:center !important;
-    border-bottom:1px dashed #dbe5e2;
-  }
-  #vmipl-site .vm-dropdown-menu a:last-child{
-    border-bottom:none !important;
-  }
-  #vmipl-site .vm-dropdown-menu a:hover{
-    color:#ad7c1e !important;
-    background:transparent !important;
-  }
-
+  #vmipl-site .vm-header-inner{min-height:75px;animation:none!important;transform:none!important}
+  #vmipl-site .vm-header .vm-nav,
+  #vmipl-site .vm-scroll-header .vm-nav{display:none!important}
+  #vmipl-site .vm-menu-toggle{display:block!important;position:relative;z-index:1000}
   #vmipl-site .vm-company-name{font-size:18px}
+}
+
+/* === FULL SCREEN MOBILE NAVIGATION OVERLAY === */
+#vmipl-site #vm-mobile-nav-overlay{
+  display:none;
+  position:fixed!important;
+  top:0!important;left:0!important;right:0!important;bottom:0!important;
+  width:100vw!important;height:100vh!important;
+  max-width:100vw!important;max-height:100vh!important;
+  background:#ffffff!important;
+  z-index:99999999!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  align-items:stretch!important;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .22s ease,visibility .22s ease;
+  overflow:hidden!important;
+  margin:0!important;padding:0!important;
+}
+#vmipl-site #vm-mobile-nav-overlay.vm-mobile-active{
+  display:flex!important;
+  opacity:1!important;visibility:visible!important;pointer-events:auto!important;
+}
+#vmipl-site .vm-mobile-nav-header{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  padding:16px 20px!important;
+  background:#f8fbfa!important;
+  border-bottom:1px solid #e2ece9!important;
+  flex-shrink:0!important;
+  width:100%!important;
+  box-sizing:border-box!important;
+}
+#vmipl-site .vm-mobile-nav-brand{
+  display:flex!important;
+  align-items:center!important;
+  gap:12px!important;
+  text-decoration:none!important;
+}
+#vmipl-site .vm-mobile-nav-logo{
+  height:40px!important;width:auto!important;object-fit:contain!important;
+}
+#vmipl-site .vm-mobile-brand-title{
+  display:block!important;
+  color:#0b222d!important;
+  font-size:16px!important;
+  font-weight:800!important;
+  letter-spacing:.5px!important;
+  line-height:1.2!important;
+}
+#vmipl-site .vm-mobile-brand-sub{
+  display:block!important;
+  color:#ad7c1e!important;
+  font-size:11px!important;
+  font-weight:750!important;
+  letter-spacing:1px!important;
+  text-transform:uppercase!important;
+}
+#vmipl-site .vm-mobile-nav-close{
+  width:44px!important;height:44px!important;
+  border-radius:50%!important;
+  background:#eaf1ef!important;
+  border:1px solid #d8e5e1!important;
+  color:#0b222d!important;
+  font-size:22px!important;
+  font-weight:700!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  cursor:pointer!important;
+  transition:all .2s ease!important;
+  line-height:1!important;
+}
+#vmipl-site .vm-mobile-nav-close:hover,
+#vmipl-site .vm-mobile-nav-close:active{
+  background:#0b222d!important;
+  color:#ffffff!important;
+  transform:rotate(90deg)!important;
+}
+#vmipl-site .vm-mobile-nav-body{
+  flex:1 1 auto!important;
+  overflow-y:auto!important;
+  -webkit-overflow-scrolling:touch!important;
+  padding:24px 20px 48px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#vmipl-site .vm-mobile-nav-links{
+  width:100%!important;
+  max-width:420px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  gap:0!important;
+}
+#vmipl-site .vm-mobile-nav-link{
+  width:100%!important;
+  display:block!important;
+  padding:16px 12px!important;
+  color:#0b222d!important;
+  font-size:18px!important;
+  font-weight:800!important;
+  text-decoration:none!important;
+  text-align:center!important;
+  border-bottom:1px solid #edf3f1!important;
+  transition:color .2s ease!important;
+}
+#vmipl-site .vm-mobile-nav-link:hover,
+#vmipl-site .vm-mobile-nav-link:active{
+  color:#ad7c1e!important;
+}
+#vmipl-site .vm-mobile-accordion{
+  width:100%!important;
+  border-bottom:1px solid #edf3f1!important;
+}
+#vmipl-site .vm-mobile-accordion-toggle{
+  width:100%!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  padding:16px 12px!important;
+  background:none!important;
+  border:none!important;
+  color:#0b222d!important;
+  font-size:18px!important;
+  font-weight:800!important;
+  font-family:inherit!important;
+  cursor:pointer!important;
+  text-align:center!important;
+  transition:color .2s ease!important;
+}
+#vmipl-site .vm-mobile-accordion-toggle:hover,
+#vmipl-site .vm-mobile-accordion-toggle:active{
+  color:#ad7c1e!important;
+}
+#vmipl-site .vm-accordion-chevron{
+  width:18px!important;height:18px!important;
+  color:#ad7c1e!important;
+  transition:transform .25s ease!important;
+  flex-shrink:0!important;
+}
+#vmipl-site .vm-mobile-accordion.vm-open .vm-accordion-chevron{
+  transform:rotate(180deg)!important;
+}
+#vmipl-site .vm-mobile-sublinks{
+  display:none!important;
+  background:#f2f7f5!important;
+  border-radius:12px!important;
+  padding:10px 14px!important;
+  margin:6px auto 16px!important;
+  width:100%!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#vmipl-site .vm-mobile-accordion.vm-open .vm-mobile-sublinks{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+}
+#vmipl-site .vm-mobile-sublink{
+  display:block!important;
+  width:100%!important;
+  padding:12px 10px!important;
+  color:#12303c!important;
+  font-size:15px!important;
+  font-weight:750!important;
+  text-decoration:none!important;
+  text-align:center!important;
+  border-bottom:1px dashed #d5e4df!important;
+  transition:color .2s ease!important;
+}
+#vmipl-site .vm-mobile-sublink:last-child{
+  border-bottom:none!important;
+}
+#vmipl-site .vm-mobile-sublink:hover,
+#vmipl-site .vm-mobile-sublink:active{
+  color:#ad7c1e!important;
+}
+#vmipl-site .vm-mobile-sublink-highlight{
+  color:#a07218!important;
+  font-weight:800!important;
+}
+#vmipl-site .vm-mobile-nav-footer{
+  width:100%!important;
+  max-width:420px!important;
+  margin-top:28px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:12px!important;
+}
+#vmipl-site .vm-mobile-nav-action-btn{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  padding:13px 20px!important;
+  border-radius:8px!important;
+  font-size:15px!important;
+  font-weight:750!important;
+  text-decoration:none!important;
+}
+#vmipl-site .vm-mobile-call-btn{
+  background:#eef4f2!important;
+  color:#0f2d39!important;
+  border:1px solid #d4e2de!important;
+}
+#vmipl-site .vm-mobile-wa-btn{
+  background:#25D366!important;
+  color:#ffffff!important;
+}
+@media(min-width:1401px){
+  #vmipl-site #vm-mobile-nav-overlay{display:none!important}
 }
 @media(max-width:767px){#vmipl-site .vm-banner{min-height:580px;background-position:65% center}#vmipl-site .vm-logo{width:68px;height:45px}#vmipl-site .vm-company-name{font-family:Arial, Helvetica, sans-serif;letter-spacing:.7px;font-size:clamp(10px,3vw,15px);max-width:none;white-space:nowrap}#vmipl-site .vm-brand{gap:8px}#vmipl-site .vm-hero{min-height:505px}#vmipl-site .vm-hero-inner{padding:55px 7%}#vmipl-site .vm-hero h1{font-size:clamp(36px,9vw,48px);letter-spacing:-1px}#vmipl-site .vm-hero-content{padding-left:17px}#vmipl-site .vm-hero p{font-size:15px}#vmipl-site .vm-eyebrow{font-size:10px;letter-spacing:1px}}
 
@@ -1432,7 +1556,89 @@
 #vmipl-site .vm-scroll-header .vm-nav{gap:17px!important}
 #vmipl-site .vm-scroll-header .vm-nav a{font-size:12px!important}
 @media(max-width:650px){#vmipl-site .vm-scroll-header .vm-header-inner{height:56px!important;min-height:56px!important}#vmipl-site .vm-scroll-header .vm-logo{height:39px!important;width:61px!important}}
-</style><div class="vm-banner"><header class="vm-header"><div class="vm-header-inner"><a class="vm-brand" href="#/home"><img alt="VMIPL green and yellow logo" class="vm-logo" src="assets/img/asset-09.png"/><div class="vm-company-name">Vijaya Manohar Industries</div></a><button aria-controls="vmipl-navigation" aria-expanded="false" aria-label="Toggle navigation" class="vm-menu-toggle" onclick="var n=this.closest('.vm-header').querySelector('.vm-nav');var o=n.classList.toggle('vm-open');this.setAttribute('aria-expanded',String(o));this.textContent=o?'×':'☰'" type="button">☰</button><nav class="vm-nav" id="vmipl-navigation"><a href="#/home">Home</a><div class="vm-dropdown"><a class="vm-dropdown-label" href="#/about-us">About Us ▾</a><div class="vm-dropdown-menu">
+</style><!-- FULL-SCREEN MOBILE NAVIGATION OVERLAY -->
+<div id="vm-mobile-nav-overlay" class="vm-mobile-nav-overlay" aria-label="Mobile Navigation Overlay">
+  <div class="vm-mobile-nav-header">
+    <a href="#/home" class="vm-mobile-nav-brand" onclick="closeAllMobileNav()">
+      <img src="assets/img/asset-09.png" alt="VMIPL Logo" class="vm-mobile-nav-logo"/>
+      <div class="vm-mobile-nav-brand-text">
+        <span class="vm-mobile-brand-title">Vijaya Manohar</span>
+        <span class="vm-mobile-brand-sub">Industries Pvt. Ltd.</span>
+      </div>
+    </a>
+    <button type="button" class="vm-mobile-nav-close" aria-label="Close Navigation" onclick="closeAllMobileNav()">✕</button>
+  </div>
+
+  <div class="vm-mobile-nav-body">
+    <nav class="vm-mobile-nav-links">
+      <a href="#/home" class="vm-mobile-nav-link" onclick="closeAllMobileNav()">Home</a>
+      
+      <!-- About Us Accordion -->
+      <div class="vm-mobile-accordion">
+        <button type="button" class="vm-mobile-accordion-toggle" onclick="toggleMobileAccordion(this)">
+          <span>About Us</span>
+          <svg class="vm-accordion-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="vm-mobile-sublinks">
+          <a href="#/about-us" class="vm-mobile-sublink" onclick="closeAllMobileNav()">About Overview</a>
+          <a href="#/about-us/company-overview" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Company Overview</a>
+          <a href="#/about-us/vision-mission" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Vision &amp; Mission</a>
+          <a href="#/about-us/our-team" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Leadership &amp; Team</a>
+          <a href="#/about-us/vm-about-quality" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Quality Assurance</a>
+          <a href="./VMIPL_Updated_Company_Profile_Brochure.pdf" target="_blank" download class="vm-mobile-sublink vm-mobile-sublink-highlight" onclick="closeAllMobileNav()">Download Brochure (PDF)</a>
+        </div>
+      </div>
+
+      <!-- Capabilities Accordion -->
+      <div class="vm-mobile-accordion">
+        <button type="button" class="vm-mobile-accordion-toggle" onclick="toggleMobileAccordion(this)">
+          <span>Capabilities</span>
+          <svg class="vm-accordion-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="vm-mobile-sublinks">
+          <a href="#/capabilities" class="vm-mobile-sublink" onclick="closeAllMobileNav()">All Capabilities</a>
+          <a href="#/capabilities/capability-laser-plasma" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Laser &amp; Plasma Cutting</a>
+          <a href="#/capabilities/capability-bending-press-brake" class="vm-mobile-sublink" onclick="closeAllMobileNav()">CNC Bending &amp; Press Brake</a>
+          <a href="#/capabilities/capability-vmc-machining" class="vm-mobile-sublink" onclick="closeAllMobileNav()">VMC &amp; Machining</a>
+          <a href="#/capabilities/capability-fabrication-welding" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Sheet Metal Fabrication &amp; Welding</a>
+          <a href="#/capabilities/capability-surface-treatment" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Powder Coating &amp; 7 Tank Process</a>
+          <a href="#/capabilities/capability-end-to-end" class="vm-mobile-sublink" onclick="closeAllMobileNav()">End-to-End Manufacturing</a>
+        </div>
+      </div>
+
+      <!-- Products Accordion -->
+      <div class="vm-mobile-accordion">
+        <button type="button" class="vm-mobile-accordion-toggle" onclick="toggleMobileAccordion(this)">
+          <span>Products</span>
+          <svg class="vm-accordion-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="vm-mobile-sublinks">
+          <a href="#/products" class="vm-mobile-sublink" onclick="closeAllMobileNav()">All Products</a>
+          <a href="#/products/vm-product-tractor" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Tractor Components</a>
+          <a href="#/products/vm-product-harvester" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Harvester Components</a>
+          <a href="#/products/vm-product-construction" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Construction Equipment</a>
+          <a href="#/products/vm-product-baler" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Baler Components</a>
+          <a href="#/products/vm-product-gratings" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Metal Gratings</a>
+        </div>
+      </div>
+
+      <a href="#/contact" class="vm-mobile-nav-link" onclick="closeAllMobileNav()">Contact Us</a>
+    </nav>
+
+    <!-- Quick Touch Action Buttons -->
+    <div class="vm-mobile-nav-footer">
+      <a href="tel:+917767804445" class="vm-mobile-nav-action-btn vm-mobile-call-btn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 7767804445
+      </a>
+      <a href="https://wa.me/917767804445?text=Hello%20VMIPL%20Team%2C%20I%20would%20like%20to%20enquire%20about%20precision%20sheet%20metal%20manufacturing." target="_blank" rel="noopener noreferrer" class="vm-mobile-nav-action-btn vm-mobile-wa-btn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.133-.521-1.625-.673-2.67-2.316-2.75-2.424-.08-.108-.662-.881-.662-1.682 0-.801.42-1.194.57-1.353.15-.158.328-.198.437-.198.109 0 .219.002.315.006.101.005.236-.038.37.284.14.335.477 1.162.519 1.248.042.086.07.187.012.302-.058.115-.087.187-.173.287-.087.1-.183.224-.261.302-.087.087-.178.181-.077.355.101.173.45 1.742 1.342 2.536 1.144 1.018 2.109 1.332 2.408 1.48.299.148.473.123.649-.079.176-.201.753-.878.955-1.179.202-.302.403-.252.677-.151.274.101 1.737.82 2.038.971.302.151.503.227.577.352.073.126.073.729-.071 1.134zM12.012 2C6.488 2 2 6.486 2 12.008c0 1.91.541 3.696 1.479 5.226L2 22l4.898-1.442c1.474.887 3.2 1.45 5.114 1.45 5.524 0 10.012-4.486 10.012-10.008 0-5.522-4.488-10.008-10.012-10.008z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+<div class="vm-banner"><header class="vm-header"><div class="vm-header-inner"><a class="vm-brand" href="#/home"><img alt="VMIPL green and yellow logo" class="vm-logo" src="assets/img/asset-09.png"/><div class="vm-company-name">Vijaya Manohar Industries</div></a><button aria-controls="vm-mobile-nav-overlay" aria-expanded="false" aria-label="Open Navigation" class="vm-menu-toggle" onclick="openMobileNav()" type="button">&#9776;</button><nav class="vm-nav" id="vmipl-navigation"><a href="#/home">Home</a><div class="vm-dropdown"><a class="vm-dropdown-label" href="#/about-us">About Us ▾</a><div class="vm-dropdown-menu">
 <a href="#/about-us/company-overview">Company Overview</a><a href="#/about-us/vision-mission">Vision &amp; Mission</a><a href="#/about-us/our-team">Leadership Team</a><a href="#/about-us/vm-about-quality">Quality Assurance</a><a href="#/about-us/vm-about-profile">Company Brochure</a></div></div><div class="vm-dropdown"><a class="vm-dropdown-label" href="#/capabilities">Capabilities ▾</a><div class="vm-dropdown-menu"><a href="#/capabilities">All Capabilities</a><a href="#/capabilities/capability-laser-plasma">Laser &amp; Plasma Cutting</a><a href="#/capabilities/capability-bending-press-brake">CNC Bending &amp; Press Brake</a><a href="#/capabilities/capability-vmc-machining">VMC &amp; Machining</a><a href="#/capabilities/capability-fabrication-welding">Sheet Metal Fabrication &amp; Welding</a><a href="#/capabilities/capability-surface-treatment">Powder Coating, Shot Blasting &amp; 7 Tank Process</a><a href="#/capabilities/capability-end-to-end">End-to-End Manufacturing</a></div></div><div class="vm-dropdown"><a class="vm-dropdown-label" href="#/products">Products ▾</a><div class="vm-dropdown-menu">
 <a href="#/products/vm-product-tractor">Tractor Components</a><a href="#/products/vm-product-harvester">Harvester Components</a><a href="#/products/vm-product-construction">Construction Equipment</a><a href="#/products/vm-product-baler">Baler Components</a><a href="#/products/vm-product-gratings">Metal Gratings</a></div></div><a href="#/contact">Contact Us</a></nav></div></header><section class="vm-hero vm-home-hero"><div class="vm-hero-inner"><div class="vm-hero-content"><div class="vm-eyebrow">PRECISION SHEET METAL MANUFACTURING</div><h1>Built with Precision.<br/>Made for Performance.</h1><p>From laser cutting and CNC bending to fabrication and finishing, we manufacture sheet metal components with a focus on quality, consistency and dependable delivery.</p><a class="vm-hero-btn" href="#/capabilities">Explore Our Capabilities <span aria-hidden="true">→</span></a></div></div></section><section class="vm-hero vm-about-hero"><div class="vm-hero-inner"><div class="vm-hero-content"><div class="vm-eyebrow">ABOUT VIJAYA MANOHAR INDUSTRIES</div><h1>Built on Trust.<br/>Driven by Precision.</h1><p>Get to know the people, purpose and manufacturing approach behind Vijaya Manohar Industries.</p><a class="vm-hero-btn" href="#/about-us/company-overview">Discover Our Story <span aria-hidden="true">→</span></a></div></div></section></div><div id="vm-home-view"><section aria-labelledby="vm-about-heading" class="vm-about"><div class="vm-about-inner"><div class="vm-about-label">About Us</div><div class="vm-about-content"><h2 id="vm-about-heading">Manufacturing with purpose.<br/>Driven by precision.</h2><p>At Vijaya Manohar Industries, we bring together skilled people, practical engineering expertise and modern sheet metal manufacturing capabilities to create components our customers can rely on. Our focus is simple: consistent quality, attention to detail and a commitment to every project we undertake.</p><a class="vm-team-btn" href="#/about-us/our-team">Discover Our Team <span aria-hidden="true">→</span></a></div></div></section><section aria-labelledby="vm-cap-heading" class="vm-capabilities" id="vm-capabilities">
 <div class="vm-capabilities-inner">
@@ -1585,13 +1791,13 @@
 <div class="ab-leadership-grid">
 <article class="ab-leader-card">
 <div class="ab-leader-portrait">
-  <img alt="Mr. Yashwant Patil - Managing Director, VMIPL" loading="lazy" src="assets/leadership/yashwant-patil-md.jpg"/>
+  <img class="ab-leader-photo ab-leader-md" alt="Mr. Yashwant Patil - Managing Director, VMIPL" loading="lazy" src="assets/leadership/yashwant-patil-md.jpg"/>
 </div>
 <div class="ab-leader-copy"><span class="ab-leader-role">LEADERSHIP</span><h3>Mr. Yashwant Patil</h3><p class="ab-leader-designation">Managing Director</p><p>Provides overall direction for Vijaya Manohar Industries, with a focus on customer relationships, business priorities and long-term development.</p></div>
 </article>
 <article class="ab-leader-card">
 <div class="ab-leader-portrait">
-  <img alt="Mr. Vivek Mittal - Plant Head, VMIPL" loading="lazy" src="assets/leadership/vivek-mittal-plant-head.jpg"/>
+  <img class="ab-leader-photo ab-leader-ph" alt="Mr. Vivek Mittal - Plant Head, VMIPL" loading="lazy" src="assets/leadership/vivek-mittal-plant-head.jpg"/>
 </div>
 <div class="ab-leader-copy"><span class="ab-leader-role">OPERATIONS</span><h3>Mr. Vivek Mittal</h3><p class="ab-leader-designation">Plant Head</p><p>Oversees day-to-day plant operations, coordinating teams and manufacturing activities with attention to workmanship, process and delivery.</p></div>
 </article>
@@ -1972,84 +2178,42 @@ window.location.href=url;
   <span class="vm-whatsapp-text">Chat on WhatsApp</span>
 </a>
 <script>
-/* === Mobile Nav Accordion: Centered Bright Theme & Auto-Close on Any Click === */
-(function(){
-  function initMobileNavAccordion(){
-    var site = document.getElementById('vmipl-site');
-    if(!site) return;
+/* === Fullscreen Mobile Navigation Global Engine === */
+window.openMobileNav = function(){
+  var overlay = document.getElementById('vm-mobile-nav-overlay');
+  if(!overlay) return;
+  overlay.classList.add('vm-mobile-active');
+  document.body.style.overflow = 'hidden';
+};
 
-    var headers = site.querySelectorAll('.vm-header, .vm-scroll-header');
-    headers.forEach(function(hdr){
-      var nav = hdr.querySelector('.vm-nav');
-      if(!nav) return;
+window.closeAllMobileNav = function(){
+  var overlay = document.getElementById('vm-mobile-nav-overlay');
+  if(!overlay) return;
+  overlay.classList.remove('vm-mobile-active');
+  document.body.style.overflow = '';
+  document.querySelectorAll('.vm-mobile-accordion').forEach(function(acc){
+    acc.classList.remove('vm-open');
+  });
+};
 
-      var dropdowns = nav.querySelectorAll('.vm-dropdown');
-      dropdowns.forEach(function(dd){
-        var label = dd.querySelector('.vm-dropdown-label');
-        if(!label) return;
-
-        label.addEventListener('click', function(e){
-          if(window.innerWidth <= 1400){
-            e.preventDefault();
-            e.stopPropagation();
-            
-            var isOpen = dd.classList.contains('vm-open-sub');
-            dropdowns.forEach(function(other){
-              if(other !== dd) other.classList.remove('vm-open-sub');
-            });
-            dd.classList.toggle('vm-open-sub', !isOpen);
-          }
-        });
-      });
-
-      // Function to close the mobile menu immediately
-      function closeMobileNav(){
-        if(window.innerWidth <= 1400){
-          nav.classList.remove('vm-open');
-          dropdowns.forEach(function(dd){ dd.classList.remove('vm-open-sub'); });
-          var btn = hdr.querySelector('.vm-menu-toggle');
-          if(btn){
-            btn.setAttribute('aria-expanded', 'false');
-            btn.textContent = '☰';
-          }
-        }
-      }
-
-      // Close on ANY anchor tag clicked (main links, submenu links, brand)
-      nav.querySelectorAll('a').forEach(function(a){
-        if(!a.classList.contains('vm-dropdown-label')){
-          a.addEventListener('click', function(){
-            closeMobileNav();
-          });
-        }
-      });
-    });
-
-    // Also close if user clicks outside of mobile nav
-    document.addEventListener('click', function(e){
-      if(window.innerWidth <= 1400){
-        headers.forEach(function(hdr){
-          var nav = hdr.querySelector('.vm-nav');
-          var btn = hdr.querySelector('.vm-menu-toggle');
-          if(nav && nav.classList.contains('vm-open')){
-            if(!nav.contains(e.target) && !btn.contains(e.target)){
-              nav.classList.remove('vm-open');
-              if(btn){
-                btn.setAttribute('aria-expanded', 'false');
-                btn.textContent = '☰';
-              }
-            }
-          }
-        });
-      }
-    });
+window.toggleMobileAccordion = function(btn){
+  var parent = btn.closest('.vm-mobile-accordion');
+  if(!parent) return;
+  var isOpen = parent.classList.contains('vm-open');
+  document.querySelectorAll('.vm-mobile-accordion').forEach(function(acc){
+    acc.classList.remove('vm-open');
+  });
+  if(!isOpen){
+    parent.classList.add('vm-open');
   }
+};
 
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', initMobileNavAccordion);
-  } else {
-    initMobileNavAccordion();
-  }
-})();
+window.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') window.closeAllMobileNav();
+});
+window.addEventListener('hashchange', function(){
+  window.closeAllMobileNav();
+});
 </script>
+
 </body></html>
