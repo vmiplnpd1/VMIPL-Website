@@ -358,7 +358,12 @@
 }
 </style><style>
 /* Presentation-ready leadership: intentional monogram design, no photo placeholders */
-#vmipl-site .ab-leader-portrait{width:100%;min-height:360px;height:400px;position:relative;overflow:hidden;background:transparent;display:flex;align-items:center;justify-content:center;padding:12px 12px 0}
+#vmipl-site .ab-leader-portrait{width:100%;height:440px;position:relative;overflow:hidden;background:transparent;border:none !important;padding:0 !important;margin:0 !important}
+#vmipl-site .ab-leader-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;border:none !important;outline:none !important;transition:transform .4s ease}
+#vmipl-site .ab-leader-card:hover .ab-leader-portrait img{transform:scale(1.03)}
+@media(max-width:767px){
+  #vmipl-site .ab-leader-portrait{height:360px !important}
+}
 #vmipl-site .ab-leader-portrait img{width:100%;height:100%;object-fit:contain;object-position:center bottom;display:block;transition:transform .35s ease}
 #vmipl-site .ab-leader-card:hover .ab-leader-portrait img{transform:scale(1.02)}
 @media(max-width:700px){
@@ -395,10 +400,10 @@
 #vmipl-site .vm-nav a:hover{color:#e5ad35!important}
 #vmipl-site .vm-dropdown{position:relative}
 #vmipl-site .vm-dropdown-label{display:block;padding:34px 0}
-#vmipl-site .vm-dropdown-menu{display:none;position:absolute;top:100%;left:-15px;min-width:230px;background:#172b3b;border-top:3px solid #e5ad35;box-shadow:0 12px 25px rgba(0,0,0,.25);padding:8px 0;z-index:100}
+#vmipl-site .vm-dropdown-menu{display:none;position:absolute;top:100%;left:-15px;min-width:260px;background:#ffffff;border-top:3px solid #e5ad35;box-shadow:0 14px 30px rgba(0,0,0,.18);padding:8px 0;z-index:9999;border-radius:0 0 8px 8px}
 #vmipl-site .vm-dropdown:hover .vm-dropdown-menu,#vmipl-site .vm-dropdown:focus-within .vm-dropdown-menu{display:block}
-#vmipl-site .vm-dropdown-menu a{display:block;padding:13px 18px;white-space:normal}
-#vmipl-site .vm-dropdown-menu a:hover{background:rgba(255,255,255,.1)}
+#vmipl-site .vm-dropdown-menu a{display:block;padding:12px 20px;white-space:normal;color:#122b36 !important;font-size:13.5px;font-weight:700;border-bottom:1px solid #f0f4f3}
+#vmipl-site .vm-dropdown-menu a:hover{background:#f3f8f7;color:#ad7c1e !important}
 #vmipl-site .vm-contact{padding:14px 19px;border:1px solid rgba(255,255,255,.85)}
 #vmipl-site .vm-contact:hover{background:#e5ad35;border-color:#e5ad35;color:#172b3b!important}
 #vmipl-site .vm-hero{min-height:472px;display:flex;align-items:center}
@@ -452,7 +457,7 @@
     border-bottom:1px solid #e8eeec;
     font-size:17px;
     font-weight:750;
-    color:#16323d !important;
+    color:#0a1e27 !important; font-size:17px !important; font-weight:800 !important;
     cursor:pointer;
     text-align:center;
     transition:color .2s;
@@ -495,7 +500,7 @@
     padding:11px 0 !important;
     font-size:14px !important;
     font-weight:600 !important;
-    color:#26434d !important;
+    color:#0e2630 !important; font-size:14.5px !important; font-weight:750 !important;
     text-align:center !important;
     border-bottom:1px dashed #dbe5e2;
   }
@@ -1071,7 +1076,7 @@
  background-image:linear-gradient(0deg,rgba(9,31,41,.76),rgba(9,31,41,.08) 60%),url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85");
 }
 #vmipl-site .ab-leadership-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-#vmipl-site .ab-leader-card{background:#ffffff;border:1px solid #e2eae7;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(18,46,54,.05);transition:box-shadow .3s ease}
+#vmipl-site .ab-leader-card{background:#ffffff;border:none !important;box-shadow:0 10px 32px rgba(12,35,42,.07);border-radius:14px;overflow:hidden;transition:transform .3s ease, box-shadow .3s ease}
 #vmipl-site .ab-leader-portrait{min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:17px;background:linear-gradient(140deg,#294851,#152c36);position:relative;overflow:hidden}
 #vmipl-site .ab-leader-plant{background:linear-gradient(140deg,#476169,#213944)}
 #vmipl-site .ab-leader-portrait:after{content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(229,173,53,.18);border-radius:50%;right:-110px;top:-100px}
