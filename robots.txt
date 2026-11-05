@@ -1,0 +1,23 @@
+# robots.txt for Vijaya Manohar Industries Pvt. Ltd. (VMIPL)
+# Website: https://vmiplnpd1.github.io/VMIPL-Website/
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /assets/
+Allow: /VMIPL_Updated_Company_Profile_Brochure.pdf
+
+# Disallow internal build artifacts and temporary files
+Disallow: /*.zip$
+Disallow: /*.tmp$
+Disallow: /*.bak$
+Disallow: /.git/
+
+# Search Engine Crawl-Delay (optional friendly throttle)
+Crawl-delay: 1
+
+# Host domain
+Host: https://vmiplnpd1.github.io/VMIPL-Website/
+
+# XML Sitemaps
+Sitemap: https://vmiplnpd1.github.io/VMIPL-Website/sitemap.xml

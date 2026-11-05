@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vmiplnpd1.github.io/VMIPL-Website/assets/img/asset-17.png</image:loc>
+      <image:title>Vijaya Manohar Industries Pvt. Ltd. Manufacturing Facility</image:title>
+      <image:caption>Precision sheet metal manufacturing, fabrication and powder coating facility in Pune</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Us Section & Sub-pages -->
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/about-us</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/about-us/company-overview</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/about-us/vision-mission</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/about-us/our-team</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://vmiplnpd1.github.io/VMIPL-Website/assets/leadership/yashwant-patil-md.jpg</image:loc>
+      <image:title>Mr. Yashwant Patil - Managing Director, VMIPL</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://vmiplnpd1.github.io/VMIPL-Website/assets/leadership/vivek-mittal-plant-head.jpg</image:loc>
+      <image:title>Mr. Vivek Mittal - Plant Head, VMIPL</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/about-us/vm-about-quality</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Manufacturing Capabilities & Machinery -->
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/capabilities</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/capabilities/capability-laser-plasma</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/capabilities/capability-bending-press-brake</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/capabilities/capability-vmc-machining</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/capabilities/capability-fabrication-welding</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/capabilities/capability-surface-treatment</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/capabilities/capability-end-to-end</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Industrial Products Portfolio -->
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/products</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/products/vm-product-tractor</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/products/vm-product-harvester</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/products/vm-product-construction</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/products/vm-product-baler</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/products/vm-product-gratings</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Contact & Location -->
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/#/contact</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Corporate Profile Document -->
+  <url>
+    <loc>https://vmiplnpd1.github.io/VMIPL-Website/VMIPL_Updated_Company_Profile_Brochure.pdf</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+</urlset>
