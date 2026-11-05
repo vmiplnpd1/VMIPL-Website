@@ -406,7 +406,25 @@
 #vmipl-site .vm-hero-btn{display:inline-flex;align-items:center;gap:30px;padding:15px 23px;background:#e5ad35;color:#142431!important;text-decoration:none!important;font-size:14px;font-weight:700;transition:.25s}
 #vmipl-site .vm-hero-btn:hover{background:#fff}
 #vmipl-site .vm-menu-toggle{display:none;background:transparent;border:0;color:#fff;font-size:30px;cursor:pointer}
-@media(max-width:1400px){#vmipl-site .vm-header-inner{min-height:75px}#vmipl-site .vm-menu-toggle{display:block}#vmipl-site .vm-nav{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 6%;background:#172b3b;flex-direction:column;align-items:stretch;gap:0;max-height:75vh;overflow-y:auto;z-index:100}#vmipl-site .vm-nav.vm-open{display:flex}#vmipl-site .vm-nav>a,#vmipl-site .vm-dropdown-label{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)}#vmipl-site .vm-dropdown-menu{display:block;position:static;background:transparent;box-shadow:none;border:0;padding-left:15px}#vmipl-site .vm-dropdown-menu a{padding:10px 0;font-weight:400}#vmipl-site .vm-company-name{font-size:18px}}
+@media(max-width:1400px){
+  #vmipl-site .vm-header-inner{min-height:75px}
+  #vmipl-site .vm-menu-toggle{display:block}
+  #vmipl-site .vm-nav{display:none;position:absolute;top:100%;left:0;right:0;padding:14px 6% 22px;background:#172b3b;flex-direction:column;align-items:stretch;gap:0;max-height:80vh;overflow-y:auto;z-index:100;box-shadow:0 15px 30px rgba(0,0,0,.35)}
+  #vmipl-site .vm-nav.vm-open{display:flex}
+  #vmipl-site .vm-nav>a,
+  #vmipl-site .vm-dropdown-label{display:flex;align-items:center;justify-content:space-between;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:15px;cursor:pointer}
+  
+  /* In mobile: Hide sub-menus by default. Only reveal when parent dropdown has .vm-open-sub */
+  #vmipl-site .vm-dropdown-menu{display:none !important;position:static !important;background:rgba(0,0,0,.2) !important;box-shadow:none !important;border:0 !important;border-left:3px solid #e5ad35 !important;padding:6px 0 6px 16px !important;margin:4px 0 8px !important;border-radius:0 6px 6px 0}
+  #vmipl-site .vm-dropdown.vm-open-sub .vm-dropdown-menu{display:block !important}
+  
+  /* Toggle indicator arrow on mobile */
+  #vmipl-site .vm-dropdown-label::after{content:"▼";font-size:10px;margin-left:8px;transition:transform .25s ease;opacity:.8}
+  #vmipl-site .vm-dropdown.vm-open-sub .vm-dropdown-label::after{transform:rotate(180deg);color:#e5ad35}
+  
+  #vmipl-site .vm-dropdown-menu a{padding:9px 0;font-size:13px;font-weight:500;color:#e1e7ea !important}
+  #vmipl-site .vm-company-name{font-size:18px}
+}
 @media(max-width:767px){#vmipl-site .vm-banner{min-height:580px;background-position:65% center}#vmipl-site .vm-logo{width:68px;height:45px}#vmipl-site .vm-company-name{font-family:Arial, Helvetica, sans-serif;letter-spacing:.7px;font-size:clamp(10px,3vw,15px);max-width:none;white-space:nowrap}#vmipl-site .vm-brand{gap:8px}#vmipl-site .vm-hero{min-height:505px}#vmipl-site .vm-hero-inner{padding:55px 7%}#vmipl-site .vm-hero h1{font-size:clamp(36px,9vw,48px);letter-spacing:-1px}#vmipl-site .vm-hero-content{padding-left:17px}#vmipl-site .vm-hero p{font-size:15px}#vmipl-site .vm-eyebrow{font-size:10px;letter-spacing:1px}}
 
 /* ABOUT US SECTION */
@@ -1798,4 +1816,60 @@ window.location.href=url;
   <svg class="vm-whatsapp-icon" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.133-.521-1.625-.673-2.67-2.316-2.75-2.424-.08-.108-.662-.881-.662-1.682 0-.801.42-1.194.57-1.353.15-.158.328-.198.437-.198.109 0 .219.002.315.006.101.005.236-.038.37.284.14.335.477 1.162.519 1.248.042.086.07.187.012.302-.058.115-.087.187-.173.287-.087.1-.183.224-.261.302-.087.087-.178.181-.077.355.101.173.45 1.742 1.342 2.536 1.144 1.018 2.109 1.332 2.408 1.48.299.148.473.123.649-.079.176-.201.753-.878.955-1.179.202-.302.403-.252.677-.151.274.101 1.737.82 2.038.971.302.151.503.227.577.352.073.126.073.729-.071 1.134zM12.012 2C6.488 2 2 6.486 2 12.008c0 1.91.541 3.696 1.479 5.226L2 22l4.898-1.442c1.474.887 3.2 1.45 5.114 1.45 5.524 0 10.012-4.486 10.012-10.008 0-5.522-4.488-10.008-10.012-10.008z"/></svg>
   <span class="vm-whatsapp-text">Chat on WhatsApp</span>
 </a>
+<script>
+/* === Mobile Nav Accordion: Show 5 Main Pages, Expand Submenu Only on Click === */
+(function(){
+  function initMobileNavAccordion(){
+    var site = document.getElementById('vmipl-site');
+    if(!site) return;
+
+    var headers = site.querySelectorAll('.vm-header, .vm-scroll-header');
+    headers.forEach(function(hdr){
+      var nav = hdr.querySelector('.vm-nav');
+      if(!nav) return;
+
+      var dropdowns = nav.querySelectorAll('.vm-dropdown');
+      dropdowns.forEach(function(dd){
+        var label = dd.querySelector('.vm-dropdown-label');
+        if(!label) return;
+
+        label.addEventListener('click', function(e){
+          // Only operate accordion behavior in mobile/tablet viewport (<1400px)
+          if(window.innerWidth <= 1400){
+            e.preventDefault();
+            e.stopPropagation();
+            
+            var isOpen = dd.classList.contains('vm-open-sub');
+            // Close other sibling dropdowns for clean accordion view
+            dropdowns.forEach(function(other){
+              if(other !== dd) other.classList.remove('vm-open-sub');
+            });
+            dd.classList.toggle('vm-open-sub', !isOpen);
+          }
+        });
+      });
+
+      // Auto close mobile drawer when any link is clicked
+      nav.querySelectorAll('a:not(.vm-dropdown-label)').forEach(function(a){
+        a.addEventListener('click', function(){
+          if(window.innerWidth <= 1400){
+            nav.classList.remove('vm-open');
+            var btn = hdr.querySelector('.vm-menu-toggle');
+            if(btn){
+              btn.setAttribute('aria-expanded', 'false');
+              btn.textContent = '☰';
+            }
+          }
+        });
+      });
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initMobileNavAccordion);
+  } else {
+    initMobileNavAccordion();
+  }
+})();
+</script>
 </body></html>
