@@ -358,7 +358,9 @@
 }
 </style><style>
 /* Presentation-ready leadership: intentional monogram design, no photo placeholders */
-#vmipl-site .ab-leader-portrait{min-height:140px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+#vmipl-site .ab-leader-portrait{min-height:320px;height:340px;position:relative;overflow:hidden;background:#152c36}
+#vmipl-site .ab-leader-portrait img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .4s ease}
+#vmipl-site .ab-leader-card:hover .ab-leader-portrait img{transform:scale(1.04)}
 #vmipl-site .ab-portrait-mark{font-size:clamp(38px,5vw,68px)!important;font-weight:700!important;letter-spacing:.08em!important}
 #vmipl-site .vm-contact-verified-address{line-height:1.7!important}
 </style><style>
@@ -1433,11 +1435,15 @@
 </div>
 <div class="ab-leadership-grid">
 <article class="ab-leader-card">
-<div aria-label="Leadership monogram" class="ab-leader-portrait ab-leader-md"><div class="ab-portrait-mark">MD</div></div>
+<div class="ab-leader-portrait">
+  <img alt="Mr. Yashwant Patil - Managing Director, VMIPL" loading="lazy" src="assets/leadership/yashwant-patil-md.jpg"/>
+</div>
 <div class="ab-leader-copy"><span class="ab-leader-role">LEADERSHIP</span><h3>Mr. Yashwant Patil</h3><p class="ab-leader-designation">Managing Director</p><p>Provides overall direction for Vijaya Manohar Industries, with a focus on customer relationships, business priorities and long-term development.</p></div>
 </article>
 <article class="ab-leader-card">
-<div aria-label="Leadership monogram" class="ab-leader-portrait ab-leader-plant"><div class="ab-portrait-mark">PH</div></div>
+<div class="ab-leader-portrait">
+  <img alt="Mr. Vivek Mittal - Plant Head, VMIPL" loading="lazy" src="assets/leadership/vivek-mittal-plant-head.jpg"/>
+</div>
 <div class="ab-leader-copy"><span class="ab-leader-role">OPERATIONS</span><h3>Mr. Vivek Mittal</h3><p class="ab-leader-designation">Plant Head</p><p>Oversees day-to-day plant operations, coordinating teams and manufacturing activities with attention to workmanship, process and delivery.</p></div>
 </article>
 </div>
