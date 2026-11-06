@@ -1726,6 +1726,225 @@
       height: 44px;
     }
   </style>
+<style id="vm-careers-style">/* === Careers Section Styling === */
+#vmipl-site .vm-career-perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 45px;
+}
+#vmipl-site .vm-career-perk {
+  background: #ffffff;
+  border: 1px solid #dce7e4;
+  border-radius: 10px;
+  padding: 24px 22px;
+  box-shadow: 0 4px 18px rgba(17, 39, 48, 0.04);
+}
+#vmipl-site .vm-career-perk-icon {
+  font-size: 26px;
+  color: #ad7c1e;
+  margin-bottom: 12px;
+}
+#vmipl-site .vm-career-perk h4 {
+  font-size: 17px;
+  color: #17323c;
+  margin: 0 0 8px;
+  font-weight: 750;
+}
+#vmipl-site .vm-career-perk p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #586e73;
+  margin: 0;
+}
+
+#vmipl-site .vm-career-board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e1ebe8;
+  padding-bottom: 14px;
+}
+#vmipl-site .vm-career-board-header h3 {
+  font-size: 24px;
+  color: #17323c;
+  margin: 0;
+  font-weight: 750;
+}
+#vmipl-site .vm-career-board-badge {
+  background: #eef5f3;
+  color: #a07218;
+  font-size: 12px;
+  font-weight: 750;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #d6e4e0;
+}
+
+#vmipl-site .vm-career-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+#vmipl-site .vm-career-card {
+  background: #ffffff;
+  border: 1px solid #dce7e4;
+  border-radius: 12px;
+  padding: 28px 26px;
+  box-shadow: 0 6px 20px rgba(17, 39, 48, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+#vmipl-site .vm-career-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(17, 39, 48, 0.09);
+  border-color: #c9dbd6;
+}
+#vmipl-site .vm-career-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+#vmipl-site .vm-career-dept {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ad7c1e;
+}
+#vmipl-site .vm-career-type {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2e6955;
+  background: #eaf5f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+#vmipl-site .vm-career-card h4 {
+  font-size: 19px;
+  color: #17323c;
+  margin: 0 0 10px;
+  font-weight: 750;
+  line-height: 1.3;
+}
+#vmipl-site .vm-career-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12.5px;
+  color: #637a80;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+#vmipl-site .vm-career-card p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #556c72;
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+#vmipl-site .vm-career-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eef3f1;
+  padding-top: 16px;
+  margin-top: auto;
+}
+#vmipl-site .vm-career-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #19343d;
+  color: #ffffff !important;
+  font-size: 13.5px;
+  font-weight: 750;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+#vmipl-site .vm-career-apply-btn:hover {
+  background: #ad7c1e;
+  transform: translateY(-2px);
+}
+
+#vmipl-site .vm-career-cta-box {
+  background: #19343d;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 34px 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(15, 35, 45, 0.12);
+}
+#vmipl-site .vm-career-cta-content h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+#vmipl-site .vm-career-cta-content p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #c9d8d6;
+  margin: 0;
+  max-width: 650px;
+}
+#vmipl-site .vm-career-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+#vmipl-site .vm-career-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #e5ad35;
+  color: #142531 !important;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+#vmipl-site .vm-career-resume-btn:hover {
+  background: #ffffff;
+}
+#vmipl-site .vm-career-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #c0d3d1 !important;
+  font-size: 12.5px;
+  font-weight: 650;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+#vmipl-site .vm-career-phone-btn:hover {
+  color: #e5ad35 !important;
+}
+
+@media(max-width: 900px) {
+  #vmipl-site .vm-career-perks-grid {
+    grid-template-columns: 1fr;
+  }
+  #vmipl-site .vm-career-grid {
+    grid-template-columns: 1fr;
+  }
+  #vmipl-site .vm-career-cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}</style>
 </head>
 
 <body style="margin:0">
@@ -6517,6 +6736,7 @@
                 Mission</a>
               <a href="#/about-us/our-team" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Leadership &amp;
                 Team</a>
+              <a href="#/about-us/careers" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Careers &amp; Opportunities</a>
               <a href="#/about-us/vm-about-quality" class="vm-mobile-sublink" onclick="closeAllMobileNav()">Quality
                 Assurance</a>
               <a target="_blank" rel="noopener noreferrer" href="./VMIPL_Updated_Company_Profile_Brochure.pdf" download
@@ -6640,7 +6860,8 @@
             <div class="vm-dropdown"><a class="vm-dropdown-label" href="#/about-us">About Us ▾</a>
               <div class="vm-dropdown-menu">
                 <a href="#/about-us/company-overview">Company Overview</a><a href="#/about-us/vision-mission">Vision
-                  &amp; Mission</a><a href="#/about-us/our-team">Leadership Team</a><a
+                  &amp; Mission</a><a href="#/about-us/our-team">Leadership Team</a>
+              <a href="#/about-us/careers">Careers &amp; Opportunities</a><a
                   href="#/about-us/vm-about-quality">Quality Assurance</a><a href="#/about-us/vm-about-profile">Company
                   Brochure</a>
               </div>
@@ -7048,6 +7269,131 @@
               <p>Our production, technical and support teams contribute their expertise across cutting, bending,
                 fabrication, finishing and customer coordination.</p>
             </div><a class="ab-text-link" href="#/contact">Connect With Our Team <span>↗</span></a>
+          </div>
+        </div>
+      </section>
+<!-- ==========================================
+           06 / CAREERS & OPPORTUNITIES SECTION
+           ========================================== -->
+      <section class="ab-careers" id="careers" style="padding: 95px 0 105px; background: #f8faf9; border-top: 1px solid #e2ebe8; scroll-margin-top: 80px;">
+        <div class="ab-container">
+          <div class="ab-team-head" style="margin-bottom: 45px;">
+            <div>
+              <span class="ab-kicker">06 / CAREERS &amp; OPPORTUNITIES</span>
+              <h2>Build your career<br /><em>in precision engineering.</em></h2>
+            </div>
+            <p>At Vijaya Manohar Industries, we bring together skilled machine operators, technicians, and engineering professionals committed to quality and craft. Explore our current open positions at our Talegaon MIDC, Pune manufacturing facility.</p>
+          </div>
+
+          <!-- Why Work at VMIPL -->
+          <div class="vm-career-perks-grid">
+            <div class="vm-career-perk">
+              <div class="vm-career-perk-icon">⚙</div>
+              <h4>Advanced CNC Machinery</h4>
+              <p>Operate high-power CNC fiber lasers, synchronized press brakes, and precision vertical machining centers.</p>
+            </div>
+            <div class="vm-career-perk">
+              <div class="vm-career-perk-icon">🛡</div>
+              <h4>Safety &amp; Process Rigor</h4>
+              <p>Structured ISO 9001:2015 environment with calibrated measurement tools, PPE protocols, and clean shop floors.</p>
+            </div>
+            <div class="vm-career-perk">
+              <div class="vm-career-perk-icon">📈</div>
+              <h4>Skill Growth &amp; Stability</h4>
+              <p>Long-term OEM production programs, mentorship from experienced leaders, and continuous skill upgrading.</p>
+            </div>
+          </div>
+
+          <!-- Current Open Positions Board -->
+          <div class="vm-career-board-header">
+            <h3>Current Open Positions</h3>
+            <span class="vm-career-board-badge">Talegaon MIDC, Pune</span>
+          </div>
+
+          <div class="vm-career-grid">
+            <!-- Job 1 -->
+            <article class="vm-career-card">
+              <div class="vm-career-card-top">
+                <span class="vm-career-dept">Cutting &amp; Profiling</span>
+                <span class="vm-career-type">Full Time</span>
+              </div>
+              <h4>CNC Fiber Laser Operator / Programmer</h4>
+              <div class="vm-career-meta">
+                <span>📍 Talegaon MIDC, Pune</span>
+                <span>💼 2 – 5 Years Exp.</span>
+              </div>
+              <p>Setting up and operating CNC fiber laser cutting machinery, layout nesting for MS/SS/Aluminum sheets up to 20mm, parameter calibration, and part quality checks.</p>
+              <div class="vm-career-card-actions">
+                <a href="mailto:planthead@vijayamanoharind.com?subject=Job%20Application%20-%20CNC%20Fiber%20Laser%20Operator&body=Dear%20VMIPL%20Hiring%20Team%2C%0A%0AI%20would%20like%20to%20apply%20for%20the%20CNC%20Fiber%20Laser%20Operator%20position.%0A%0AName%3A%0APhone%3A%0ATotal%20Experience%3A%0ACurrent%20Company%3A%0A%0APlease%20find%20attached%20my%20resume." class="vm-career-apply-btn">Apply for Position <span>↗</span></a>
+              </div>
+            </article>
+
+            <!-- Job 2 -->
+            <article class="vm-career-card">
+              <div class="vm-career-card-top">
+                <span class="vm-career-dept">Forming &amp; Bending</span>
+                <span class="vm-career-type">Full Time</span>
+              </div>
+              <h4>CNC Press Brake / Bending Operator</h4>
+              <div class="vm-career-meta">
+                <span>📍 Talegaon MIDC, Pune</span>
+                <span>💼 2 – 4 Years Exp.</span>
+              </div>
+              <p>Setting up CNC press brake tooling, reading technical drawings, executing multi-stage bend sequences, and verifying bend angles with digital angle gauges.</p>
+              <div class="vm-career-card-actions">
+                <a href="mailto:planthead@vijayamanoharind.com?subject=Job%20Application%20-%20CNC%20Press%20Brake%20Operator&body=Dear%20VMIPL%20Hiring%20Team%2C%0A%0AI%20would%20like%20to%20apply%20for%20the%20CNC%20Press%20Brake%20Operator%20position.%0A%0AName%3A%0APhone%3A%0ATotal%20Experience%3A%0ACurrent%20Company%3A%0A%0APlease%20find%20attached%20my%20resume." class="vm-career-apply-btn">Apply for Position <span>↗</span></a>
+              </div>
+            </article>
+
+            <!-- Job 3 -->
+            <article class="vm-career-card">
+              <div class="vm-career-card-top">
+                <span class="vm-career-dept">Quality Assurance</span>
+                <span class="vm-career-type">Full Time</span>
+              </div>
+              <h4>Quality Control Inspector (Sheet Metal)</h4>
+              <div class="vm-career-meta">
+                <span>📍 Talegaon MIDC, Pune</span>
+                <span>💼 3 – 6 Years Exp.</span>
+              </div>
+              <p>Performing in-process inspection and final PDI using calibrated verniers, height gauges, micrometers, and surface finish tests in accordance with ISO 9001:2015.</p>
+              <div class="vm-career-card-actions">
+                <a href="mailto:planthead@vijayamanoharind.com?subject=Job%20Application%20-%20Quality%20Control%20Inspector&body=Dear%20VMIPL%20Hiring%20Team%2C%0A%0AI%20would%20like%20to%20apply%20for%20the%20Quality%20Control%20Inspector%20position.%0A%0AName%3A%0APhone%3A%0ATotal%20Experience%3A%0ACurrent%20Company%3A%0A%0APlease%20find%20attached%20my%20resume." class="vm-career-apply-btn">Apply for Position <span>↗</span></a>
+              </div>
+            </article>
+
+            <!-- Job 4 -->
+            <article class="vm-career-card">
+              <div class="vm-career-card-top">
+                <span class="vm-career-dept">Welding &amp; Assembly</span>
+                <span class="vm-career-type">Full Time</span>
+              </div>
+              <h4>MIG / TIG Welder &amp; Fabricator</h4>
+              <div class="vm-career-meta">
+                <span>📍 Talegaon MIDC, Pune</span>
+                <span>💼 2 – 5 Years Exp.</span>
+              </div>
+              <p>Welding and assembling sheet metal enclosures, tractor brackets, and structural frames using jigs/fixtures with strong penetration, neat beads, and minimal distortion.</p>
+              <div class="vm-career-card-actions">
+                <a href="mailto:planthead@vijayamanoharind.com?subject=Job%20Application%20-%20MIG%20TIG%20Welder&body=Dear%20VMIPL%20Hiring%20Team%2C%0A%0AI%20would%20like%20to%20apply%20for%20the%20MIG%20TIG%20Welder%20position.%0A%0AName%3A%0APhone%3A%0ATotal%20Experience%3A%0ACurrent%20Company%3A%0A%0APlease%20find%20attached%20my%20resume." class="vm-career-apply-btn">Apply for Position <span>↗</span></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- General Application Box -->
+          <div class="vm-career-cta-box">
+            <div class="vm-career-cta-content">
+              <h3>Don't see your specific role?</h3>
+              <p>We are constantly expanding production and welcome applications from enthusiastic operators, CNC programmers, maintenance technicians, and engineers.</p>
+            </div>
+            <div class="vm-career-cta-actions">
+              <a href="mailto:planthead@vijayamanoharind.com?subject=General%20Job%20Application%20-%20VMIPL&body=Dear%20VMIPL%20Plant%20Head%20%26%20HR%2C%0A%0AI%20am%20interested%20in%20career%20opportunities%20at%20Vijaya%20Manohar%20Industries.%0A%0AName%3A%0APhone%3A%0AArea%20of%20Expertise%3A%0AYears%20of%20Experience%3A%0A%0APlease%20find%20attached%20my%20resume." class="vm-career-resume-btn">
+                Send Your Resume <span>✉</span>
+              </a>
+              <a href="tel:+917767804445" class="vm-career-phone-btn">
+                Call HR: +91 7767804445
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -7719,7 +8065,7 @@
         <div>
           <h3>Quick Links</h3>
           <nav aria-label="Footer navigation" class="vm-footer-links"><a href="#/home">Home</a><a
-              href="#/about-us">About Us</a><a href="#/capabilities">Capabilities</a><a href="#/products">Products</a><a
+              href="#/about-us">About Us</a><a href="#/about-us/careers">Careers</a><a href="#/capabilities">Capabilities</a><a href="#/products">Products</a><a
               href="#/contact">Contact Us</a></nav>
         </div>
         <div class="vm-footer-contact">
@@ -7745,7 +8091,7 @@
       var root = document.getElementById('vmipl-site'); if (!root) return;
       var keys = ['home', 'about-us', 'capabilities', 'products', 'contact'];
       function route() {
-        var raw = decodeURIComponent(location.hash.replace(/^#\/?/, '')); var parts = raw.split('/').filter(Boolean); var page = parts[0] === 'industries' ? 'contact' : keys.indexOf(parts[0]) >= 0 ? parts[0] : 'home'; var sub = parts.slice(1).join('/');
+        var raw = decodeURIComponent(location.hash.replace(/^#\/?/, '')); var hashParts = raw.split('#'); var parts = hashParts[0].split('/').filter(Boolean); var page = parts[0] === 'industries' ? 'contact' : keys.indexOf(parts[0]) >= 0 ? parts[0] : 'home'; var sub = hashParts[1] || parts.slice(1).join('/');
         root.classList.toggle('vm-show-about', page === 'about-us'); root.classList.toggle('vm-show-extra', page !== 'home' && page !== 'about-us');
         root.setAttribute('data-current-page', page);
         var views = root.querySelectorAll('.vm-extra-view'); for (var i = 0; i < views.length; i++) { views[i].style.display = views[i].id === 'vm-page-' + page ? 'block' : 'none'; }
@@ -8130,7 +8476,15 @@
           title: 'Vision, Mission & Quality Policy | Vijaya Manohar Industries',
           desc: 'Committed to manufacturing excellence, defect-free production, and dependable partnerships with global and domestic OEMs.'
         },
-        'about-us/our-team': {
+            'about-us#careers': {
+          title: 'Careers & Job Openings in Pune | Vijaya Manohar Industries (VMIPL)',
+          desc: 'Explore open positions at VMIPL: CNC laser cutting operators, press brake operators, quality control inspectors, and MIG/TIG welders in Talegaon MIDC, Pune.'
+        },
+        'about-us/careers': {
+          title: 'Careers & Job Openings in Pune | Vijaya Manohar Industries (VMIPL)',
+          desc: 'Explore open positions at VMIPL: CNC laser cutting operators, press brake operators, quality control inspectors, and MIG/TIG welders in Talegaon MIDC, Pune.'
+        },
+    'about-us/our-team': {
           title: 'Leadership Team | Mr. Yashwant Patil (MD) & Mr. Vivek Mittal (Plant Head) | VMIPL',
           desc: 'Meet the executive leadership guiding VMIPL: Managing Director Yashwant Patil and Plant Head Vivek Mittal.'
         },
