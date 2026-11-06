@@ -2133,9 +2133,59 @@
     grid-template-columns: 1fr;
   }
 }</style>
+<style id="vm-bottom-and-header-fix">
+    html {
+      background-color: #10232d !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    body {
+      background-color: #10232d !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    #vmipl-site {
+      background-color: #ffffff;
+      overflow-x: hidden;
+    }
+    #vmipl-site .vm-footer {
+      background-color: #10232d !important;
+      margin-bottom: 0 !important;
+    }
+    #vmipl-site .vm-footer-bottom {
+      margin-bottom: 0 !important;
+    }
+    /* Fixed scroll-up header across all pages including Contact Us */
+    #vmipl-site .vm-scroll-header,
+    #vmipl-site.vm-show-about .vm-scroll-header,
+    #vmipl-site.vm-show-extra .vm-scroll-header,
+    #vmipl-site[data-current-page] .vm-scroll-header {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      z-index: 99999 !important;
+      width: 100% !important;
+      background: rgba(13, 33, 43, 0.94) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.17) !important;
+      box-shadow: 0 12px 32px rgba(4, 20, 29, 0.22) !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      margin: 0 !important;
+    }
+    #vmipl-site .vm-scroll-header.vm-scroll-header-visible,
+    #vmipl-site.vm-show-about .vm-scroll-header.vm-scroll-header-visible,
+    #vmipl-site.vm-show-extra .vm-scroll-header.vm-scroll-header-visible,
+    #vmipl-site[data-current-page] .vm-scroll-header.vm-scroll-header-visible {
+      transform: translateY(0) !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+    }
+  </style>
 </head>
 
-<body style="margin:0">
+<body style="margin:0;padding:0;background:#10232d;">
   <div id="vmipl-site">
     <style>
       #vmipl-site {
@@ -5895,9 +5945,9 @@
         overflow: visible !important;
       }
 
-      #vmipl-site[data-current-page="infrastructure"] .vm-header,
-      #vmipl-site[data-current-page="quality"] .vm-header,
-      #vmipl-site[data-current-page="contact"] .vm-header {
+      #vmipl-site[data-current-page="infrastructure"] .vm-banner .vm-header,
+      #vmipl-site[data-current-page="quality"] .vm-banner .vm-header,
+      #vmipl-site[data-current-page="contact"] .vm-banner .vm-header {
         position: relative !important;
         z-index: 30 !important;
         background: transparent !important;
@@ -5934,7 +5984,7 @@
         height: auto !important
       }
 
-      #vmipl-site.vm-show-extra .vm-header {
+      #vmipl-site.vm-show-extra .vm-banner .vm-header {
         position: relative;
         z-index: 30;
         background: transparent !important;
