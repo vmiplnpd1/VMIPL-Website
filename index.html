@@ -3539,15 +3539,27 @@
       #vmipl-site .vm-cap-arrow {
         align-self: center;
         justify-self: end;
-        display: grid;
-        place-items: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 30px;
         height: 30px;
         border: 1px solid #cbd5d0;
         border-radius: 50%;
         color: #172b3b;
-        font-size: 18px;
-        transition: background .25s, color .25s, transform .25s;
+        line-height: 1;
+        padding: 0;
+        box-sizing: border-box;
+        transition: background .25s, color .25s, transform .25s, border-color .25s;
+      }
+
+      #vmipl-site .vm-cap-arrow svg {
+        display: block;
+        width: 13px;
+        height: 13px;
+        stroke: currentColor;
+        stroke-width: 2.3;
+        flex-shrink: 0;
       }
 
       #vmipl-site .vm-cap-card:hover .vm-cap-arrow {
@@ -3863,6 +3875,7 @@
 
       #vmipl-site .vm-cap-card:hover .vm-cap-arrow {
         background: #e5ad35 !important;
+        border-color: #e5ad35 !important;
         color: #152733 !important;
       }
 
@@ -4187,9 +4200,23 @@
         height: 42px;
         border: 1px solid rgba(229, 173, 53, .65);
         border-radius: 50%;
-        display: grid;
-        place-items: center;
-        font-size: 22px
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        padding: 0;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        transition: background .25s, color .25s, border-color .25s;
+      }
+
+      #vmipl-site .vm-why-bottom span svg {
+        display: block;
+        width: 18px;
+        height: 18px;
+        stroke: currentColor;
+        stroke-width: 2.3;
+        flex-shrink: 0;
       }
 
       #vmipl-site .vm-why-reasons {
@@ -7506,35 +7533,35 @@
             <a class="vm-cap-card" href="#/capabilities/capability-laser-plasma"><span class="vm-cap-number">01</span>
               <div class="vm-cap-info">
                 <h3>Laser &amp; Plasma Cutting</h3>
-              </div><span aria-hidden="true" class="vm-cap-arrow">↗</span>
+              </div><span aria-hidden="true" class="vm-cap-arrow"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
             </a>
             <a class="vm-cap-card" href="#/capabilities/capability-bending-press-brake"><span
                 class="vm-cap-number">02</span>
               <div class="vm-cap-info">
                 <h3>CNC Bending &amp; Press Brake</h3>
-              </div><span aria-hidden="true" class="vm-cap-arrow">↗</span>
+              </div><span aria-hidden="true" class="vm-cap-arrow"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
             </a>
             <a class="vm-cap-card" href="#/capabilities/capability-vmc-machining"><span class="vm-cap-number">03</span>
               <div class="vm-cap-info">
                 <h3>VMC &amp; Machining</h3>
-              </div><span aria-hidden="true" class="vm-cap-arrow">↗</span>
+              </div><span aria-hidden="true" class="vm-cap-arrow"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
             </a>
             <a class="vm-cap-card" href="#/capabilities/capability-fabrication-welding"><span
                 class="vm-cap-number">04</span>
               <div class="vm-cap-info">
                 <h3>Sheet Metal Fabrication &amp; Welding</h3>
-              </div><span aria-hidden="true" class="vm-cap-arrow">↗</span>
+              </div><span aria-hidden="true" class="vm-cap-arrow"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
             </a>
             <a class="vm-cap-card" href="#/capabilities/capability-surface-treatment"><span
                 class="vm-cap-number">05</span>
               <div class="vm-cap-info">
                 <h3>Powder Coating, Shot Blasting &amp; 7 Tank Process</h3>
-              </div><span aria-hidden="true" class="vm-cap-arrow">↗</span>
+              </div><span aria-hidden="true" class="vm-cap-arrow"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
             </a>
             <a class="vm-cap-card" href="#/capabilities/capability-end-to-end"><span class="vm-cap-number">06</span>
               <div class="vm-cap-info">
                 <h3>End-to-End Manufacturing</h3>
-              </div><span aria-hidden="true" class="vm-cap-arrow">↗</span>
+              </div><span aria-hidden="true" class="vm-cap-arrow"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span>
             </a>
           </div>
           <div class="vm-cap-footer"><a class="vm-cap-link" href="#/capabilities">Explore All Capabilities <span
@@ -7679,7 +7706,7 @@
             <h2 id="vm-why-heading">The details<br />make the <em>difference.</em></h2>
             <p>Manufacturing is about more than making parts. It is about understanding requirements, working with care
               and delivering a consistent experience from start to finish.</p>
-            <div class="vm-why-bottom"><span aria-hidden="true">↗</span> OUR APPROACH TO MANUFACTURING</div>
+            <div class="vm-why-bottom"><span aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></span> OUR APPROACH TO MANUFACTURING</div>
           </div>
           <div class="vm-why-reasons">
             <article class="vm-why-reason"><span class="vm-why-index">01 /</span><span aria-hidden="true"
