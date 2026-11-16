@@ -6332,19 +6332,56 @@
       }
 
       
-      /* Capabilities Hero Background Video - Fixed to match exact length of all hero sections */
+      /* ==========================================================================
+         UNIFIED HERO SECTION LENGTH ACROSS ALL PAGES
+         Ensures Home, About Us, Capabilities, Products, and Contact all have the
+         exact same visible length (height) on every device.
+         ========================================================================== */
+
+      /* 1. Desktop (>1400px): Exactly 540px total visible height */
+      #vmipl-site .vm-banner {
+        height: 540px !important;
+        min-height: 540px !important;
+        max-height: 540px !important;
+        box-sizing: border-box !important;
+      }
+
+      #vmipl-site .vm-hero {
+        height: 452px !important;
+        min-height: 452px !important;
+        max-height: 452px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      #vmipl-site.vm-show-extra .vm-banner,
+      #vmipl-site[data-current-page="contact"] .vm-banner {
+        min-height: 0 !important;
+        height: auto !important;
+      }
+
+      #vmipl-site .vm-subhero,
+      #vmipl-site.vm-show-extra .vm-extra-view > .vm-subhero,
+      #vmipl-site[data-current-page="contact"] #vm-page-contact > .vm-subhero,
+      #vmipl-site #vm-page-capabilities > .vm-subhero,
+      #vmipl-site #vm-page-products > .vm-subhero {
+        height: 540px !important;
+        min-height: 540px !important;
+        max-height: 540px !important;
+        box-sizing: border-box !important;
+        margin-top: -88px !important;
+        padding-top: 155px !important;
+        padding-bottom: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      /* Capabilities Background Video Fit */
       #vmipl-site #vm-page-capabilities > .vm-subhero {
         position: relative !important;
         overflow: hidden !important;
         background: #081922 !important;
-        height: 528px !important;
-        min-height: 528px !important;
-        max-height: 528px !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        align-items: center !important;
-        padding-top: 150px !important;
-        padding-bottom: 45px !important;
       }
 
       #vmipl-site #vm-page-capabilities .vm-subhero-video {
@@ -6383,25 +6420,71 @@
         z-index: 3 !important;
       }
 
+      /* 2. Laptops / Tablets (768px - 1400px): Exactly 500px total visible height */
       @media (max-width: 1400px) {
-        #vmipl-site #vm-page-capabilities > .vm-subhero {
+        #vmipl-site .vm-banner {
+          height: 500px !important;
+          min-height: 500px !important;
+          max-height: 500px !important;
+        }
+
+        #vmipl-site .vm-hero {
+          height: 425px !important;
+          min-height: 425px !important;
+          max-height: 425px !important;
+        }
+
+        #vmipl-site.vm-show-extra .vm-banner,
+        #vmipl-site[data-current-page="contact"] .vm-banner {
+          min-height: 0 !important;
+          height: auto !important;
+        }
+
+        #vmipl-site .vm-subhero,
+        #vmipl-site.vm-show-extra .vm-extra-view > .vm-subhero,
+        #vmipl-site[data-current-page="contact"] #vm-page-contact > .vm-subhero,
+        #vmipl-site #vm-page-capabilities > .vm-subhero,
+        #vmipl-site #vm-page-products > .vm-subhero {
+          height: 500px !important;
+          min-height: 500px !important;
+          max-height: 500px !important;
           margin-top: -75px !important;
           padding-top: 140px !important;
-          padding-bottom: 40px !important;
-          height: 528px !important;
-          min-height: 528px !important;
-          max-height: 528px !important;
+          padding-bottom: 45px !important;
         }
       }
 
-      @media (max-width: 580px) {
-        #vmipl-site #vm-page-capabilities > .vm-subhero {
-          margin-top: -75px !important;
-          padding-top: 130px !important;
-          padding-bottom: 35px !important;
+      /* 3. Mobile (<= 767px): Exactly 465px total visible height */
+      @media (max-width: 767px) {
+        #vmipl-site .vm-banner {
           height: 465px !important;
           min-height: 465px !important;
           max-height: 465px !important;
+        }
+
+        #vmipl-site .vm-hero {
+          height: 400px !important;
+          min-height: 400px !important;
+          max-height: 400px !important;
+        }
+
+        #vmipl-site.vm-show-extra .vm-banner,
+        #vmipl-site[data-current-page="contact"] .vm-banner {
+          min-height: 0 !important;
+          height: auto !important;
+        }
+
+        #vmipl-site .vm-subhero,
+        #vmipl-site.vm-show-extra .vm-extra-view > .vm-subhero,
+        #vmipl-site[data-current-page="contact"] #vm-page-contact > .vm-subhero,
+        #vmipl-site #vm-page-capabilities > .vm-subhero,
+        #vmipl-site #vm-page-products > .vm-subhero {
+          height: 465px !important;
+          min-height: 465px !important;
+          max-height: 465px !important;
+          margin-top: -65px !important;
+          padding-top: 125px !important;
+          padding-bottom: 35px !important;
         }
       }
 
