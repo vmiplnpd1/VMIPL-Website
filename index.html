@@ -6335,7 +6335,7 @@
       /* ==========================================================================
          UNIFIED HERO SECTION LENGTH ACROSS ALL PAGES
          Ensures Home, About Us, Capabilities, Products, and Contact all have the
-         exact same visible length (height) on every device.
+         exact same visible length (height), padding balance, and typography layout.
          ========================================================================== */
 
       /* 1. Desktop (>1400px): Exactly 540px total visible height */
@@ -6371,10 +6371,20 @@
         max-height: 540px !important;
         box-sizing: border-box !important;
         margin-top: -88px !important;
-        padding-top: 155px !important;
-        padding-bottom: 50px !important;
+        padding-top: 88px !important;
+        padding-bottom: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
         display: flex !important;
         align-items: center !important;
+      }
+
+      #vmipl-site .vm-subhero-inner {
+        width: 100% !important;
+        max-width: 1500px !important;
+        padding: 0 7% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
       }
 
       /* Capabilities Background Video Fit */
@@ -6420,6 +6430,29 @@
         z-index: 3 !important;
       }
 
+      /* Contact Hero Multi-action Buttons */
+      #vmipl-site .vm-contact-hero-actions {
+        display: flex !important;
+        gap: 16px !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        margin-top: 0 !important;
+      }
+
+      #vmipl-site .vm-hero-btn-outline {
+        background: rgba(255, 255, 255, 0.08) !important;
+        color: #ffffff !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.55) !important;
+      }
+
+      #vmipl-site .vm-hero-btn-outline:hover {
+        background: #ffffff !important;
+        color: #142431 !important;
+        border-color: #ffffff !important;
+        transform: translateY(-3px) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .2) !important;
+      }
+
       /* 2. Laptops / Tablets (768px - 1400px): Exactly 500px total visible height */
       @media (max-width: 1400px) {
         #vmipl-site .vm-banner {
@@ -6449,8 +6482,10 @@
           min-height: 500px !important;
           max-height: 500px !important;
           margin-top: -75px !important;
-          padding-top: 140px !important;
-          padding-bottom: 45px !important;
+          padding-top: 75px !important;
+          padding-bottom: 0 !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
         }
       }
 
@@ -6483,8 +6518,10 @@
           min-height: 465px !important;
           max-height: 465px !important;
           margin-top: -65px !important;
-          padding-top: 125px !important;
-          padding-bottom: 35px !important;
+          padding-top: 65px !important;
+          padding-bottom: 0 !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
         }
       }
 
@@ -8100,11 +8137,14 @@
           <source src="13053695_3840_2160_50fps.mp4" type="video/mp4">
         </video>
         <div class="vm-subhero-video-overlay" aria-hidden="true"></div>
-        <div class="vm-subhero-inner"><span class="vm-page-kicker">MANUFACTURING CAPABILITIES</span>
-          <h1>Integrated sheet metal manufacturing.</h1>
-          <p>Explore the coordinated processes that support our sheet metal components, from initial profile cutting
-            through forming, assembly and finishing.</p><a class="vm-page-action" href="#/contact">Discuss Your
-            Requirements <span>↗</span></a>
+        <div class="vm-subhero-inner">
+          <div class="vm-hero-content">
+            <div class="vm-eyebrow">MANUFACTURING CAPABILITIES</div>
+            <h1>Integrated sheet metal manufacturing.</h1>
+            <p>Explore the coordinated processes that support our sheet metal components, from initial profile cutting
+              through forming, assembly and finishing.</p>
+            <a class="vm-hero-btn" href="#/contact">Discuss Your Requirements <span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </section>
       <section class="vm-cap-intro">
@@ -8338,10 +8378,13 @@
     <div class="vm-extra-view" id="vm-page-products">
       <section class="vm-subhero"
         style="--page-photo:url('https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&amp;fit=crop&amp;w=2200&amp;q=85')">
-        <div class="vm-subhero-inner"><span class="vm-page-kicker">OUR PRODUCTS</span>
-          <h1>Manufactured for real-world applications.</h1>
-          <p>Explore the kinds of sheet metal components and assemblies our manufacturing processes can support.</p><a
-            class="vm-page-action" href="#/contact">Discuss Your Requirements <span>↗</span></a>
+        <div class="vm-subhero-inner">
+          <div class="vm-hero-content">
+            <div class="vm-eyebrow">OUR PRODUCTS</div>
+            <h1>Manufactured for real-world applications.</h1>
+            <p>Explore the kinds of sheet metal components and assemblies our manufacturing processes can support.</p>
+            <a class="vm-hero-btn" href="#/contact">Discuss Your Requirements <span aria-hidden="true">→</span></a>
+          </div>
         </div>
       </section>
       <section class="vm-page-section vm-light">
@@ -8487,12 +8530,16 @@
     </div>
     <div class="vm-extra-view" id="vm-page-contact">
       <section class="vm-subhero vm-contact-hero" style="--page-photo:url('assets/img/asset-25.webp')">
-        <div class="vm-subhero-inner"><span class="vm-page-kicker">LET'S CONNECT</span>
-          <h1>Let's make your next<br />project a reality.</h1>
-          <p>Discuss precision sheet metal manufacturing, share your specifications and connect with the Vijaya Manohar
-            Industries team.</p><div class="vm-contact-hero-actions">
-            <a class="vm-page-action" href="#/contact/contact-enquiry">Send an Enquiry <span>↗</span></a>
-            <a class="vm-page-action vm-page-action-outline" href="#/contact/careers">Explore Open Positions <span>💼</span></a>
+        <div class="vm-subhero-inner">
+          <div class="vm-hero-content">
+            <div class="vm-eyebrow">LET'S CONNECT</div>
+            <h1>Let's make your next<br />project a reality.</h1>
+            <p>Discuss precision sheet metal manufacturing, share your specifications and connect with the Vijaya Manohar
+              Industries team.</p>
+            <div class="vm-contact-hero-actions">
+              <a class="vm-hero-btn" href="#/contact/contact-enquiry">Send an Enquiry <span aria-hidden="true">→</span></a>
+              <a class="vm-hero-btn vm-hero-btn-outline" href="#/contact/careers">Explore Open Positions <span aria-hidden="true">💼</span></a>
+            </div>
           </div>
         </div>
       </section>
