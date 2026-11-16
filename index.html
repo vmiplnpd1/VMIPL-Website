@@ -6334,37 +6334,44 @@
       
       /* Capabilities Hero Background Video */
       #vmipl-site #vm-page-capabilities > .vm-subhero {
-        position: relative;
-        overflow: hidden;
-        background: #081922;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #081922 !important;
       }
 
       #vmipl-site #vm-page-capabilities .vm-subhero-video {
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
         height: 100%;
+        min-width: 100%;
+        min-height: 100%;
         object-fit: cover;
         object-position: center;
-        z-index: 0;
+        z-index: 1 !important;
         pointer-events: none;
+        display: block;
       }
 
       #vmipl-site #vm-page-capabilities .vm-subhero-video-overlay {
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(8, 25, 34, 0.94) 0%, rgba(8, 25, 34, 0.80) 48%, rgba(8, 25, 34, 0.40) 100%);
-        z-index: 1;
+        background: linear-gradient(90deg, rgba(8, 25, 34, 0.76) 0%, rgba(8, 25, 34, 0.50) 50%, rgba(8, 25, 34, 0.20) 100%);
+        z-index: 2 !important;
         pointer-events: none;
       }
 
       #vmipl-site #vm-page-capabilities .vm-subhero-inner {
         position: relative;
-        z-index: 2;
+        z-index: 3 !important;
       }
 
       #vmipl-site.vm-show-extra .vm-extra-view>.vm-subhero {
@@ -7974,9 +7981,8 @@
       </section>
     </div>
     <div class="vm-extra-view" id="vm-page-capabilities">
-      <section class="vm-subhero"
-        style="--page-photo:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=2200&amp;q=85')">
-        <video class="vm-subhero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=2200&amp;q=85">
+      <section class="vm-subhero">
+        <video class="vm-subhero-video" src="13053695_3840_2160_50fps.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto">
           <source src="13053695_3840_2160_50fps.mp4" type="video/mp4">
         </video>
         <div class="vm-subhero-video-overlay" aria-hidden="true"></div>
@@ -8926,7 +8932,7 @@
         var raw = decodeURIComponent(location.hash.replace(/^#\/?/, '')); var hashParts = raw.split('#'); var parts = hashParts[0].split('/').filter(Boolean); var page = parts[0] === 'industries' ? 'contact' : keys.indexOf(parts[0]) >= 0 ? parts[0] : 'home'; var sub = hashParts[1] || parts.slice(1).join('/');
         root.classList.toggle('vm-show-about', page === 'about-us'); root.classList.toggle('vm-show-extra', page !== 'home' && page !== 'about-us');
         root.setAttribute('data-current-page', page);
-        var views = root.querySelectorAll('.vm-extra-view'); for (var i = 0; i < views.length; i++) { views[i].style.display = views[i].id === 'vm-page-' + page ? 'block' : 'none'; } if (page === 'capabilities') { var capVid = document.querySelector('#vm-page-capabilities .vm-subhero-video'); if (capVid && capVid.paused) { capVid.play().catch(function(){}); } }
+        var views = root.querySelectorAll('.vm-extra-view'); for (var i = 0; i < views.length; i++) { views[i].style.display = views[i].id === 'vm-page-' + page ? 'block' : 'none'; } if (page === 'capabilities') { var capVid = document.querySelector('#vm-page-capabilities .vm-subhero-video'); if (capVid) { capVid.muted = true; capVid.defaultMuted = true; capVid.play().catch(function(){ window.addEventListener('click', function playOnce(){ capVid.play().catch(function(){}); }, { once: true }); }); } }
         var title = page === 'home' ? 'Home' : page === 'about-us' ? 'About Us' : page.split('-').map(function (x) { return x.charAt(0).toUpperCase() + x.slice(1) }).join(' ');
         document.title = title + ' | Vijaya Manohar Industries';
         root.querySelectorAll('.vm-header a').forEach(function (a) { var active = a.getAttribute('href') === '#/' + page; a.classList.toggle('vm-link-active', active); });
