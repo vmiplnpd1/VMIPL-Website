@@ -2184,6 +2184,299 @@
       pointer-events: auto !important;
     }
   </style>
+<style id="vm-location-redesign-css">
+/* === Redesigned Executive Facility & Location Card === */
+#vmipl-site .vm-contact-map-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: stretch;
+  background: transparent;
+  min-height: auto;
+}
+
+#vmipl-site .vm-contact-map {
+  position: relative !important;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #dce7e4;
+  box-shadow: 0 8px 28px rgba(18, 37, 46, 0.05);
+  background: #f1f4f2;
+  min-height: 520px;
+}
+
+#vmipl-site .vm-contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  border: 0;
+  display: block;
+}
+
+#vmipl-site .vm-contact-map .vm-map-address-overlay {
+  position: absolute !important;
+  left: 14px;
+  top: 14px;
+  right: auto;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100% - 28px);
+  padding: 10px 16px;
+  background: #ffffff;
+  color: #17323c !important;
+  text-decoration: none !important;
+  font: 700 12.5px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  border: 1px solid #dce7e4;
+  border-bottom: 1px solid #dce7e4 !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#vmipl-site .vm-contact-map .vm-map-address-overlay:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  color: #ad7c1e !important;
+}
+
+#vmipl-site .vm-facility-card {
+  background: #ffffff;
+  border: 1px solid #dce7e4;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(18, 37, 46, 0.05);
+  padding: 34px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#vmipl-site .vm-facility-head {
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eef4f1;
+}
+
+#vmipl-site .vm-facility-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #ad7c1e;
+  background: #fbf5ea;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #f2e4cc;
+  margin-bottom: 10px;
+}
+
+#vmipl-site .vm-facility-card h3 {
+  font-size: 23px;
+  color: #12252e;
+  margin: 0 0 6px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+#vmipl-site .vm-facility-sub {
+  font-size: 12.5px;
+  color: #5d757b;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+#vmipl-site .vm-facility-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+#vmipl-site .vm-facility-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+#vmipl-site .vm-facility-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #f2f7f5;
+  border: 1px solid #dbe7e4;
+  color: #ad7c1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+#vmipl-site .vm-facility-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+#vmipl-site .vm-facility-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #7b9196;
+  margin-bottom: 3px;
+}
+
+#vmipl-site .vm-facility-val {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #27414a;
+  font-weight: 600;
+  margin: 0;
+}
+
+#vmipl-site .vm-facility-link {
+  color: #163640 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  font-weight: 700;
+  transition: color 0.2s ease;
+  padding: 0 !important;
+}
+
+#vmipl-site .vm-facility-link:hover {
+  color: #ad7c1e !important;
+}
+
+#vmipl-site .vm-facility-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #eef4f1;
+}
+
+#vmipl-site .vm-facility-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #19343d;
+  color: #ffffff !important;
+  font-size: 13.5px;
+  font-weight: 750;
+  padding: 11px 18px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  border: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+  flex: 1 1 auto;
+}
+
+#vmipl-site .vm-facility-directions-btn:hover {
+  background: #ad7c1e;
+  transform: translateY(-2px);
+}
+
+#vmipl-site .vm-facility-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25d366;
+  color: #ffffff !important;
+  font-size: 13.5px;
+  font-weight: 750;
+  padding: 11px 16px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  border: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#vmipl-site .vm-facility-wa-btn:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+}
+
+#vmipl-site .vm-facility-social {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed #e1ebe8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#vmipl-site .vm-facility-social-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6c8489;
+  letter-spacing: 0.5px;
+}
+
+#vmipl-site .vm-facility-social .vm-social-links {
+  display: flex;
+  gap: 10px;
+}
+
+#vmipl-site .vm-facility-social .vm-social-btn {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  border: 1px solid #d4e3df !important;
+  border-bottom: 1px solid #d4e3df !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #eef4f2 !important;
+  color: #17323c !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+#vmipl-site .vm-facility-social .vm-social-btn:hover {
+  transform: translateY(-2px);
+}
+
+#vmipl-site .vm-facility-social .vm-social-linkedin:hover {
+  background: #0077b5 !important;
+  border-color: #0077b5 !important;
+  color: #ffffff !important;
+}
+
+#vmipl-site .vm-facility-social .vm-social-youtube:hover {
+  background: #ff0000 !important;
+  border-color: #ff0000 !important;
+  color: #ffffff !important;
+}
+
+#vmipl-site .vm-facility-social .vm-social-facebook:hover {
+  background: #1877f2 !important;
+  border-color: #1877f2 !important;
+  color: #ffffff !important;
+}
+
+@media(max-width: 950px) {
+  #vmipl-site .vm-contact-map-grid {
+    grid-template-columns: 1fr;
+  }
+  #vmipl-site .vm-contact-map,
+  #vmipl-site .vm-contact-map iframe {
+    min-height: 380px;
+    height: 380px;
+  }
+}
+</style>
 </head>
 
 <body style="margin:0;padding:0;background:#10232d;">
@@ -8062,55 +8355,126 @@
       <section class="vm-contact-location" id="contact-location">
         <div class="vm-page-container">
           <div class="vm-contact-section-head">
-            <div><span class="vm-page-kicker">02 / FIND US</span>
-              <h2>Find Vijaya Manohar<br /><em>Industries.</em></h2>
+            <div><span class="vm-page-kicker">02 / VISIT OUR FACILITY</span>
+              <h2>Our Manufacturing Plant<br /><em>&amp; Location.</em></h2>
             </div>
-            <p>Use the map to search for our business. Please verify the correct plant location and replace the search
-              map with the confirmed address before publishing.</p>
+            <p>Located in the industrial manufacturing zone of Navalakh Umbre, Behind Talegaon MIDC, Pune. Connect with our plant operations team or schedule a facility visit.</p>
           </div>
           <div class="vm-contact-map-grid">
-            <div class="vm-contact-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            <div class="vm-contact-map">
+              <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 src="https://www.google.com/maps?q=18.7944412,73.7027853&amp;z=17&amp;output=embed"
-                title="Vijaya Manohar Industries Pvt. Ltd. factory location"></iframe><a target="_blank"
-                class="vm-map-address-overlay" href="https://maps.app.goo.gl/Jga7xURgz16zJ58Y7"
-                rel="noopener noreferrer">Vijaya Manohar Industries Pvt. Ltd. · Navalakh Umbre, Pune ↗</a></div>
-            <aside class="vm-contact-address"><span class="vm-page-kicker">OUR LOCATION</span>
-              <h3>Visit our facility.</h3>
-              <p>Vijaya Manohar Industries</p>
-              <p class="vm-contact-verified-address">Gat No. 40 &amp; 43, Navalakh Umbre, Behind Talegaon MIDC, Tal.
-                Maval, Dist. Pune, Maharashtra, India.</p>
-              <p><a href="mailto:planthead@vijayamanoharind.com">planthead@vijayamanoharind.com</a></p>
-              <p class="vm-confirmed-phone"><a href="tel:+917767804445">+91 7767804445</a></p><a target="_blank"
-                href="https://maps.app.goo.gl/Jga7xURgz16zJ58Y7" rel="noopener noreferrer">Open Google Maps
-                <span>↗</span></a>
-              <div class="vm-social-wrapper">
-                <span class="vm-social-label">Connect Online</span>
+                title="Vijaya Manohar Industries Pvt. Ltd. factory location"></iframe>
+              <a target="_blank" class="vm-map-address-overlay" href="https://maps.app.goo.gl/Jga7xURgz16zJ58Y7" rel="noopener noreferrer">
+                <span>📍</span> Navalakh Umbre, Behind Talegaon MIDC ↗
+              </a>
+            </div>
+
+            <aside class="vm-facility-card">
+              <div class="vm-facility-head">
+                <span class="vm-facility-pill">PLANT &amp; REGISTERED OFFICE</span>
+                <h3>Vijaya Manohar Industries</h3>
+                <p class="vm-facility-sub">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ad7c1e" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  ISO 9001:2015 Certified Manufacturing Facility
+                </p>
+              </div>
+
+              <div class="vm-facility-rows">
+                <!-- Address -->
+                <div class="vm-facility-row">
+                  <div class="vm-facility-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="vm-facility-info">
+                    <span class="vm-facility-label">Factory Address</span>
+                    <p class="vm-facility-val">Gat No. 40 &amp; 43, Navalakh Umbre, Behind Talegaon MIDC, Tal. Maval, Dist. Pune - 410507, Maharashtra, India.</p>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="vm-facility-row">
+                  <div class="vm-facility-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="vm-facility-info">
+                    <span class="vm-facility-label">Email Enquiries</span>
+                    <p class="vm-facility-val">
+                      <a href="mailto:planthead@vijayamanoharind.com" class="vm-facility-link">planthead@vijayamanoharind.com</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="vm-facility-row">
+                  <div class="vm-facility-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div class="vm-facility-info">
+                    <span class="vm-facility-label">Direct Line / HR</span>
+                    <p class="vm-facility-val">
+                      <a href="tel:+917767804445" class="vm-facility-link">+91 7767804445</a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="vm-facility-row">
+                  <div class="vm-facility-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="vm-facility-info">
+                    <span class="vm-facility-label">Plant Operating Hours</span>
+                    <p class="vm-facility-val">Monday – Saturday: 8:30 AM – 6:30 PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="vm-facility-actions">
+                <a target="_blank" href="https://maps.app.goo.gl/Jga7xURgz16zJ58Y7" rel="noopener noreferrer" class="vm-facility-directions-btn">
+                  Open in Google Maps <span>↗</span>
+                </a>
+                <a target="_blank" href="https://wa.me/917767804445?text=Hello%20VMIPL%20Team%2C%20I%20am%20enquiring%20about%20your%20manufacturing%20facility%20location." rel="noopener noreferrer" class="vm-facility-wa-btn">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                  WhatsApp Us
+                </a>
+              </div>
+
+              <!-- Social Links -->
+              <div class="vm-facility-social">
+                <span class="vm-facility-social-label">Connect Online:</span>
                 <div class="vm-social-links">
                   <a href="#" class="vm-social-btn vm-social-youtube" aria-label="VMIPL YouTube Channel"
                     title="YouTube (Link to be added)"
                     onclick="if(this.getAttribute('href')==='#')event.preventDefault();">
-                    <svg class="vm-social-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
-                      aria-hidden="true">
-                      <path
-                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                   </a>
                   <a href="#" class="vm-social-btn vm-social-linkedin" aria-label="VMIPL LinkedIn Profile"
                     title="LinkedIn (Link to be added)"
                     onclick="if(this.getAttribute('href')==='#')event.preventDefault();">
-                    <svg class="vm-social-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
-                      aria-hidden="true">
-                      <path
-                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.65 1.65 0 0 0-1.66 1.66 1.66 1.66 0 0 0 1.66 1.66 1.66 1.66 0 0 0 1.66-1.66 1.65 1.65 0 0 0-1.66-1.66z" />
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.65 1.65 0 0 0-1.66 1.66 1.66 1.66 0 0 0 1.66 1.66 1.66 1.66 0 0 0 1.66-1.66 1.65 1.65 0 0 0-1.66-1.66z"/>
                     </svg>
                   </a>
                   <a href="#" class="vm-social-btn vm-social-facebook" aria-label="VMIPL Facebook Page"
                     title="Facebook (Link to be added)"
                     onclick="if(this.getAttribute('href')==='#')event.preventDefault();">
-                    <svg class="vm-social-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"
-                      aria-hidden="true">
-                      <path
-                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
                   </a>
                 </div>
