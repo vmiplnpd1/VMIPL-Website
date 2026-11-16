@@ -6332,46 +6332,77 @@
       }
 
       
-      /* Capabilities Hero Background Video */
+      /* Capabilities Hero Background Video - Fixed to match exact length of all hero sections */
       #vmipl-site #vm-page-capabilities > .vm-subhero {
         position: relative !important;
         overflow: hidden !important;
         background: #081922 !important;
+        height: 528px !important;
+        min-height: 528px !important;
+        max-height: 528px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        padding-top: 150px !important;
+        padding-bottom: 45px !important;
       }
 
       #vmipl-site #vm-page-capabilities .vm-subhero-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        min-width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-        object-position: center;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+        object-fit: cover !important;
+        object-position: center !important;
         z-index: 1 !important;
-        pointer-events: none;
-        display: block;
+        pointer-events: none !important;
+        display: block !important;
       }
 
       #vmipl-site #vm-page-capabilities .vm-subhero-video-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, rgba(8, 25, 34, 0.76) 0%, rgba(8, 25, 34, 0.50) 50%, rgba(8, 25, 34, 0.20) 100%);
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: linear-gradient(90deg, rgba(8, 25, 34, 0.76) 0%, rgba(8, 25, 34, 0.50) 50%, rgba(8, 25, 34, 0.20) 100%) !important;
         z-index: 2 !important;
-        pointer-events: none;
+        pointer-events: none !important;
       }
 
       #vmipl-site #vm-page-capabilities .vm-subhero-inner {
-        position: relative;
+        position: relative !important;
         z-index: 3 !important;
+      }
+
+      @media (max-width: 1400px) {
+        #vmipl-site #vm-page-capabilities > .vm-subhero {
+          margin-top: -75px !important;
+          padding-top: 140px !important;
+          padding-bottom: 40px !important;
+          height: 528px !important;
+          min-height: 528px !important;
+          max-height: 528px !important;
+        }
+      }
+
+      @media (max-width: 580px) {
+        #vmipl-site #vm-page-capabilities > .vm-subhero {
+          margin-top: -75px !important;
+          padding-top: 130px !important;
+          padding-bottom: 35px !important;
+          height: 465px !important;
+          min-height: 465px !important;
+          max-height: 465px !important;
+        }
       }
 
       #vmipl-site.vm-show-extra .vm-extra-view>.vm-subhero {
