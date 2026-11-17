@@ -4924,8 +4924,30 @@
       }
 
       #vmipl-site .ab-purpose {
-        background: #152b34;
-        padding: 105px 0 110px
+        position: relative;
+        background-color: #0b1e27;
+        background-image:
+          linear-gradient(135deg, rgba(8, 20, 27, 0.92) 0%, rgba(13, 33, 43, 0.86) 50%, rgba(7, 18, 24, 0.94) 100%),
+          radial-gradient(circle at 85% 15%, rgba(229, 173, 53, 0.12), transparent 45%),
+          url('assets/machine-gallery/03-laser-cutting-machine.webp');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 110px 0 115px;
+        overflow: hidden;
+      }
+
+      #vmipl-site .ab-purpose::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 50% 100%, rgba(15, 36, 46, 0.45), transparent 70%);
+        pointer-events: none;
+      }
+
+      #vmipl-site .ab-purpose > .ab-container {
+        position: relative;
+        z-index: 2;
       }
 
       #vmipl-site .ab-section-heading {
@@ -4951,45 +4973,147 @@
       #vmipl-site .ab-purpose-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px
+        gap: 22px
       }
 
       #vmipl-site .ab-purpose-card {
-        background: #1e3942;
-        border: 1px solid #38535a;
-        padding: 34px 30px 40px;
-        min-height: 285px;
-        transition: transform .25s, border-color .25s
+        position: relative;
+        background: rgba(18, 41, 51, 0.78);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 4px;
+        padding: 36px 32px 42px;
+        min-height: 295px;
+        box-shadow: 0 14px 34px -4px rgba(4, 14, 19, 0.4);
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                    border-color 0.35s ease,
+                    background 0.35s ease;
+        will-change: transform, box-shadow;
+      }
+
+      #vmipl-site .ab-purpose-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #e5ad35 0%, #f7c963 100%);
+        box-shadow: 0 0 12px rgba(229, 173, 53, 0.6);
+        transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 2;
+      }
+
+      #vmipl-site .ab-purpose-card::after {
+        content: '';
+        position: absolute;
+        top: -60%;
+        left: -70%;
+        width: 60%;
+        height: 220%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+        transform: rotate(25deg);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+        z-index: 1;
       }
 
       #vmipl-site .ab-purpose-card:hover {
-        transform: translateY(-5px);
-        border-color: #e5ad35
+        transform: translateY(-8px);
+        background: rgba(22, 50, 62, 0.9);
+        border-color: rgba(229, 173, 53, 0.55);
+        box-shadow: 0 24px 50px -10px rgba(2, 10, 14, 0.65),
+                    0 0 28px rgba(229, 173, 53, 0.16);
+      }
+
+      #vmipl-site .ab-purpose-card:hover::before {
+        width: 100%;
+      }
+
+      #vmipl-site .ab-purpose-card:hover::after {
+        opacity: 1;
+        transform: rotate(25deg) translate(280%, 0);
+        transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
       }
 
       #vmipl-site .ab-card-top {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         color: #e5ad35;
-        font-size: 12px;
-        letter-spacing: 2px
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 2;
+      }
+
+      #vmipl-site .ab-card-top > span:first-child {
+        transition: letter-spacing 0.35s ease, color 0.35s ease;
+      }
+
+      #vmipl-site .ab-purpose-card:hover .ab-card-top > span:first-child {
+        letter-spacing: 3px;
+        color: #f7c963;
       }
 
       #vmipl-site .ab-line-icon {
-        font-size: 27px
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(229, 173, 53, 0.1);
+        border: 1px solid rgba(229, 173, 53, 0.28);
+        color: #e5ad35;
+        font-size: 20px;
+        line-height: 1;
+        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                    background 0.3s ease,
+                    color 0.3s ease,
+                    border-color 0.3s ease,
+                    box-shadow 0.35s ease;
+      }
+
+      #vmipl-site .ab-purpose-card:hover .ab-line-icon {
+        transform: scale(1.15) rotate(12deg);
+        background: #e5ad35;
+        color: #0b1e27;
+        border-color: #e5ad35;
+        box-shadow: 0 4px 16px rgba(229, 173, 53, 0.45);
       }
 
       #vmipl-site .ab-purpose-card h3 {
         color: #fff;
         font-size: 26px;
-        margin: 48px 0 14px
+        margin: 36px 0 14px;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+      }
+
+      #vmipl-site .ab-purpose-card:hover h3 {
+        transform: translateX(4px);
+        color: #ffffff;
       }
 
       #vmipl-site .ab-purpose-card p {
-        color: #b9c9cb;
-        font-size: 14px;
+        color: #b7c8ca;
+        font-size: 14.5px;
         line-height: 1.85;
-        margin: 0
+        margin: 0;
+        position: relative;
+        z-index: 2;
+        transition: color 0.3s ease;
+      }
+
+      #vmipl-site .ab-purpose-card:hover p {
+        color: #dce7e8;
       }
 
       #vmipl-site .ab-approach {
@@ -5349,8 +5473,15 @@
       }
 
       @media(prefers-reduced-motion:reduce) {
-        #vmipl-site .ab-purpose-card {
-          transition: none
+        #vmipl-site .ab-purpose-card,
+        #vmipl-site .ab-purpose-card::before,
+        #vmipl-site .ab-purpose-card::after,
+        #vmipl-site .ab-purpose-card:hover,
+        #vmipl-site .ab-line-icon,
+        #vmipl-site .ab-purpose-card h3,
+        #vmipl-site .ab-purpose-card p {
+          transition: none !important;
+          transform: none !important;
         }
       }
 
