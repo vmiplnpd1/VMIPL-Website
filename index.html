@@ -2315,6 +2315,11 @@
       backdrop-filter: blur(16px) !important;
       -webkit-backdrop-filter: blur(16px) !important;
       margin: 0 !important;
+      transform: translateY(-110%) !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      transition: transform 0.32s ease, opacity 0.32s ease, visibility 0.32s ease !important;
     }
     #vmipl-site .vm-scroll-header.vm-scroll-header-visible,
     #vmipl-site.vm-show-about .vm-scroll-header.vm-scroll-header-visible,
@@ -2643,18 +2648,44 @@
 
   /* Global Mobile Standards */
   @media (max-width: 768px) {
-    html, body {
+    html {
       -webkit-text-size-adjust: 100% !important;
       text-size-adjust: 100% !important;
-      overflow-x: hidden !important;
+      overflow-x: clip !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      height: auto !important;
       width: 100% !important;
+      scroll-behavior: auto !important;
+    }
+
+    body {
+      -webkit-text-size-adjust: 100% !important;
+      text-size-adjust: 100% !important;
+      overflow-x: clip !important;
+      overflow-y: visible !important;
+      -webkit-overflow-scrolling: touch !important;
+      height: auto !important;
+      min-height: 100% !important;
+      width: 100% !important;
+      position: static !important;
     }
 
     #vmipl-site {
       width: 100% !important;
-      max-width: 100vw !important;
-      overflow-x: hidden !important;
+      max-width: 100% !important;
+      overflow-x: clip !important;
+      overflow-y: visible !important;
       box-sizing: border-box !important;
+      position: relative !important;
+      scroll-behavior: auto !important;
+    }
+
+    /* Ensure hidden scroll header never swallows touch events */
+    #vmipl-site .vm-scroll-header:not(.vm-scroll-header-visible) {
+      pointer-events: none !important;
+      visibility: hidden !important;
+      transform: translateY(-110%) !important;
     }
 
     /* Interactive Elements & Touch Targets */
@@ -4429,13 +4460,12 @@
       }
 
       #vmipl-site .vm-industries-viewport {
-        overflow-x: auto;
-        overflow-y: hidden;
+        overflow: visible;
         scrollbar-width: none;
-        cursor: grab;
-        touch-action: pan-x;
+        cursor: default;
+        touch-action: auto;
         padding: 6px 0 15px;
-        mask-image: linear-gradient(90deg, transparent, #000 2%, #000 98%, transparent);
+        mask-image: none;
       }
 
       #vmipl-site .vm-industries-viewport::-webkit-scrollbar {
@@ -9963,6 +9993,7 @@
       var closeBtn = overlay.querySelector('.vm-lightbox-close');
 
       function openLightbox(src, alt) {
+        if (window.innerWidth <= 768) return; // Prevent full-screen lightbox on mobile so scrolling never locks
         lbImg.src = src;
         lbImg.alt = alt || '';
         lbCaption.textContent = alt || '';
@@ -9974,6 +10005,7 @@
       function closeLightbox() {
         overlay.classList.remove('vm-lb-open');
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
         setTimeout(function () { lbImg.src = '' }, 350);
       }
 
@@ -10096,10 +10128,23 @@
       if (!overlay) return;
       overlay.classList.remove('vm-mobile-active');
       document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
       document.querySelectorAll('.vm-mobile-accordion').forEach(function (acc) {
         acc.classList.remove('vm-open');
       });
     };
+
+    /* Fail-safe to ensure mobile scrolling is never stuck by lingering overflow:hidden */
+    window.addEventListener('touchstart', function () {
+      var nav = document.getElementById('vm-mobile-nav-overlay');
+      var isNavActive = nav && nav.classList.contains('vm-mobile-active');
+      var lb = document.querySelector('.vm-lightbox-overlay');
+      var isLbActive = lb && lb.classList.contains('vm-lb-open');
+      if (!isNavActive && !isLbActive) {
+        if (document.body.style.overflow === 'hidden') document.body.style.overflow = '';
+        if (document.documentElement.style.overflow === 'hidden') document.documentElement.style.overflow = '';
+      }
+    }, { passive: true });
 
     window.toggleMobileAccordion = function (btn) {
       var parent = btn.closest('.vm-mobile-accordion');
