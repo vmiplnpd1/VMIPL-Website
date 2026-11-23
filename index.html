@@ -2134,20 +2134,46 @@
   }
 }</style>
 <style id="vm-bottom-and-header-fix">
+    /* Eliminate double vertical scrollbar and hide right-side scroll sidebar */
     html {
       background-color: #10232d !important;
       margin: 0 !important;
       padding: 0 !important;
-      overflow-x: hidden;
+      overflow-x: hidden !important;
+      overflow-y: scroll !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    html::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
     }
     body {
       background-color: #10232d !important;
       margin: 0 !important;
       padding: 0 !important;
-      overflow-x: hidden;
+      overflow: visible !important;
+      overflow-x: clip !important;
+      width: 100% !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    body::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
     }
     #vmipl-site {
       background-color: #ffffff;
+      overflow-x: clip;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    #vmipl-site::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
     }
     #vmipl-site .vm-footer {
       background-color: #10232d !important;
@@ -8264,8 +8290,8 @@
     </div>
     <div class="vm-extra-view" id="vm-page-capabilities">
       <section class="vm-subhero">
-        <video class="vm-subhero-video" src="13053695_3840_2160_50fps.mp4" poster="assets/machine-gallery/03-laser-cutting-machine.webp" autoplay muted loop playsinline webkit-playsinline preload="metadata">
-          <source src="13053695_3840_2160_50fps.mp4" type="video/mp4">
+        <video class="vm-subhero-video" src="capabilities-hero-opt.mp4" poster="assets/machine-gallery/03-laser-cutting-machine.webp" autoplay muted loop playsinline webkit-playsinline preload="metadata">
+          <source src="capabilities-hero-opt.mp4" type="video/mp4">
         </video>
         <div class="vm-subhero-video-overlay" aria-hidden="true"></div>
         <div class="vm-subhero-inner">
