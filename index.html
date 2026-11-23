@@ -321,6 +321,122 @@
       background: #ad7c1e
     }
 
+    /* Product Portfolio Split Layout (Text Left, Image Right) */
+    #vmipl-site .vm-product-split-wrap {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 56px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    #vmipl-site .vm-product-split-copy {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #vmipl-site .vm-product-split-copy h2 {
+      font-size: clamp(28px, 3.2vw, 42px);
+      line-height: 1.2;
+      margin: 12px 0 16px;
+      color: #18333d;
+    }
+
+    #vmipl-site .vm-product-split-copy p {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: #445d65;
+      margin-bottom: 22px;
+    }
+
+    #vmipl-site .vm-product-scope-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 26px;
+    }
+
+    #vmipl-site .vm-product-scope-list span {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      background: rgba(23, 49, 59, 0.06);
+      border: 1px solid rgba(23, 49, 59, 0.12);
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #1a3843;
+      letter-spacing: 0.3px;
+    }
+
+    #vmipl-site .vm-five-soft .vm-product-scope-list span {
+      background: #ffffff;
+      border-color: #dbe4e2;
+    }
+
+    #vmipl-site .vm-product-enquire-btn {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #152b34;
+      color: #ffffff !important;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      border-left: 3px solid #e5ad35;
+      transition: background 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    #vmipl-site .vm-product-enquire-btn:hover {
+      background: #0d212b;
+      transform: translateX(4px);
+      box-shadow: 0 6px 18px rgba(13, 33, 43, 0.2);
+    }
+
+    #vmipl-site .vm-product-split-visual {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #d9e3e1;
+      box-shadow: 0 16px 36px -6px rgba(13, 33, 43, 0.12);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+    }
+
+    #vmipl-site .vm-product-split-visual:hover {
+      transform: translateY(-6px);
+      border-color: #e5ad35;
+      box-shadow: 0 24px 48px -10px rgba(13, 33, 43, 0.22);
+    }
+
+    #vmipl-site .vm-product-split-visual img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      cursor: zoom-in;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    #vmipl-site .vm-product-split-visual:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 900px) {
+      #vmipl-site .vm-product-split-wrap {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      #vmipl-site .vm-product-split-visual img {
+        height: 270px;
+      }
+    }
+
     #vmipl-site .vm-five-section[id],
     #vmipl-site .vm-cap-detail[id],
     #vmipl-site #vm-about-view section[id] {
@@ -8651,37 +8767,93 @@
         </div>
       </section>
       <section class="vm-five-section vm-five-soft" id="vm-product-tractor">
-        <div class="vm-five-wrap"><span class="vm-five-kicker">PRODUCT PORTFOLIO</span>
-          <h2>Tractor Components</h2>
-          <p>Railings, handles, toe hooks, counterweights, steering cylinder safety guards and throttle lever rods are
-            shown in the VMIPL company profile.</p>
+        <div class="vm-five-wrap vm-product-split-wrap">
+          <div class="vm-product-split-copy">
+            <span class="vm-five-kicker">01 / PRODUCT PORTFOLIO</span>
+            <h2>Tractor Components</h2>
+            <p>Railings, handles, toe hooks, counterweights, steering cylinder safety guards and throttle lever rods are shown in the VMIPL company profile.</p>
+            <div class="vm-product-scope-list">
+              <span>Precision Bending</span>
+              <span>Heavy Duty Welding</span>
+              <span>Protective Powder Coating</span>
+            </div>
+            <a class="vm-product-enquire-btn" href="#/contact/contact-enquiry">Enquire About Tractor Components <span>↗</span></a>
+          </div>
+          <div class="vm-product-split-visual">
+            <img src="assets/img/asset-19.jpg" alt="Precision Sheet Metal Tractor Components - VMIPL" loading="lazy" />
+          </div>
         </div>
       </section>
       <section class="vm-five-section" id="vm-product-harvester">
-        <div class="vm-five-wrap">
-          <h2>Sugarcane Harvester Components</h2>
-          <p>Light fabricated and tubular parts including ladders, handrails, side rails, topper masts and protective
-            guards.</p>
+        <div class="vm-five-wrap vm-product-split-wrap">
+          <div class="vm-product-split-copy">
+            <span class="vm-five-kicker">02 / PRODUCT PORTFOLIO</span>
+            <h2>Sugarcane Harvester Components</h2>
+            <p>Light fabricated and tubular parts including ladders, handrails, side rails, topper masts and protective guards.</p>
+            <div class="vm-product-scope-list">
+              <span>Tubular Fabrication</span>
+              <span>CNC Laser Profiling</span>
+              <span>Vibration Resistant Assembly</span>
+            </div>
+            <a class="vm-product-enquire-btn" href="#/contact/contact-enquiry">Enquire About Harvester Components <span>↗</span></a>
+          </div>
+          <div class="vm-product-split-visual">
+            <img src="assets/img/asset-20.jpg" alt="Sugarcane Harvester Sheet Metal Components - VMIPL" loading="lazy" />
+          </div>
         </div>
       </section>
       <section class="vm-five-section vm-five-soft" id="vm-product-construction">
-        <div class="vm-five-wrap">
-          <h2>Construction Equipment Components</h2>
-          <p>Fabricated structural parts and excavator components, including arm plates, side boom plates and base
-            plates.</p>
+        <div class="vm-five-wrap vm-product-split-wrap">
+          <div class="vm-product-split-copy">
+            <span class="vm-five-kicker">03 / PRODUCT PORTFOLIO</span>
+            <h2>Construction Equipment Components</h2>
+            <p>Fabricated structural parts and excavator components, including arm plates, side boom plates and base plates.</p>
+            <div class="vm-product-scope-list">
+              <span>Heavy Plate Cutting</span>
+              <span>High Strength Forming</span>
+              <span>Structural Fabrication</span>
+            </div>
+            <a class="vm-product-enquire-btn" href="#/contact/contact-enquiry">Enquire About Construction Components <span>↗</span></a>
+          </div>
+          <div class="vm-product-split-visual">
+            <img src="assets/img/asset-21.jpg" alt="Heavy Construction Equipment Fabrications - VMIPL" loading="lazy" />
+          </div>
         </div>
       </section>
       <section class="vm-five-section" id="vm-product-baler">
-        <div class="vm-five-wrap">
-          <h2>Baler Machine Components</h2>
-          <p>Wind guards, angle welded assemblies and base frames illustrated in the source profile.</p>
+        <div class="vm-five-wrap vm-product-split-wrap">
+          <div class="vm-product-split-copy">
+            <span class="vm-five-kicker">04 / PRODUCT PORTFOLIO</span>
+            <h2>Baler Machine Components</h2>
+            <p>Wind guards, angle welded assemblies and base frames illustrated in the source profile.</p>
+            <div class="vm-product-scope-list">
+              <span>Angle Welding</span>
+              <span>Formed Sheet Covers</span>
+              <span>Rigid Base Frames</span>
+            </div>
+            <a class="vm-product-enquire-btn" href="#/contact/contact-enquiry">Enquire About Baler Components <span>↗</span></a>
+          </div>
+          <div class="vm-product-split-visual">
+            <img src="assets/img/asset-22.jpg" alt="Agricultural Baler Machine Components - VMIPL" loading="lazy" />
+          </div>
         </div>
       </section>
       <section class="vm-five-section vm-five-soft" id="vm-product-gratings">
-        <div class="vm-five-wrap">
-          <h2>Metal Gratings</h2>
-          <p>Rectangular and radius metal grating designs, including hot-dip galvanized examples from the company
-            portfolio.</p>
+        <div class="vm-five-wrap vm-product-split-wrap">
+          <div class="vm-product-split-copy">
+            <span class="vm-five-kicker">05 / PRODUCT PORTFOLIO</span>
+            <h2>Metal Gratings</h2>
+            <p>Rectangular and radius metal grating designs, including hot-dip galvanized examples from the company portfolio.</p>
+            <div class="vm-product-scope-list">
+              <span>High Load Bearing</span>
+              <span>Hot-Dip Galvanized</span>
+              <span>Anti-Slip Flooring</span>
+            </div>
+            <a class="vm-product-enquire-btn" href="#/contact/contact-enquiry">Enquire About Metal Gratings <span>↗</span></a>
+          </div>
+          <div class="vm-product-split-visual">
+            <img src="assets/img/asset-24.jpg" alt="Industrial Heavy Duty Metal Gratings - VMIPL" loading="lazy" />
+          </div>
         </div>
       </section>
     </div>
@@ -9487,7 +9659,7 @@
       }
 
       /* Make all content images clickable */
-      var images = site.querySelectorAll('.vm-real-photo-gallery img, .vm-product-photo-frame img, .vm-cap-detail-image img, .vm-product-photo-tile img');
+      var images = site.querySelectorAll('.vm-real-photo-gallery img, .vm-product-photo-frame img, .vm-cap-detail-image img, .vm-product-photo-tile img, .vm-product-split-visual img');
       images.forEach(function (img) {
         img.classList.add('vm-clickable-img');
         img.addEventListener('click', function (e) {
