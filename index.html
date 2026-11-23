@@ -8264,7 +8264,7 @@
     </div>
     <div class="vm-extra-view" id="vm-page-capabilities">
       <section class="vm-subhero">
-        <video class="vm-subhero-video" src="13053695_3840_2160_50fps.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto">
+        <video class="vm-subhero-video" src="13053695_3840_2160_50fps.mp4" poster="assets/machine-gallery/03-laser-cutting-machine.webp" autoplay muted loop playsinline webkit-playsinline preload="metadata">
           <source src="13053695_3840_2160_50fps.mp4" type="video/mp4">
         </video>
         <div class="vm-subhero-video-overlay" aria-hidden="true"></div>
@@ -8703,13 +8703,25 @@
               <p>Fields marked * are required.</p>
             </div>
             <form class="vm-contact-form" id="vm-contact-enquiry-form" novalidate="">
-              <div class="vm-contact-form-row"><label>Full Name *<input autocomplete="name" name="name"
-                    placeholder="Your full name" required="" /></label><label>Company Name<input
-                    autocomplete="organization" name="company" placeholder="Your company" /></label></div>
-              <div class="vm-contact-form-row"><label>Email Address *<input autocomplete="email" name="email"
-                    placeholder="name@company.com" required="" type="email" /></label><label>Phone Number<input
-                    autocomplete="tel" name="phone" placeholder="Contact number" type="tel" /></label></div>
-              <div class="vm-contact-form-row"><label>Enquiry Type *<select name="type" required="">
+              <div class="vm-contact-form-row">
+                <label for="vm-enquiry-name">Full Name *
+                  <input id="vm-enquiry-name" autocomplete="name" name="name" placeholder="Your full name" required="" aria-label="Full Name" aria-required="true" />
+                </label>
+                <label for="vm-enquiry-company">Company Name
+                  <input id="vm-enquiry-company" autocomplete="organization" name="company" placeholder="Your company" aria-label="Company Name" />
+                </label>
+              </div>
+              <div class="vm-contact-form-row">
+                <label for="vm-enquiry-email">Email Address *
+                  <input id="vm-enquiry-email" autocomplete="email" name="email" placeholder="name@company.com" required="" type="email" aria-label="Email Address" aria-required="true" />
+                </label>
+                <label for="vm-enquiry-phone">Phone Number
+                  <input id="vm-enquiry-phone" autocomplete="tel" name="phone" placeholder="Contact number" type="tel" aria-label="Phone Number" />
+                </label>
+              </div>
+              <div class="vm-contact-form-row">
+                <label for="vm-enquiry-type">Enquiry Type *
+                  <select id="vm-enquiry-type" name="type" required="" aria-label="Enquiry Type" aria-required="true">
                     <option value="">Select a service</option>
                     <option>Laser Cutting</option>
                     <option>Sheet Metal Fabrication</option>
@@ -8718,11 +8730,15 @@
                     <option>Powder Coating, Shot Blasting &amp; 7 Tank Process</option>
                     <option>Multiple Processes</option>
                     <option>General Enquiry</option>
-                  </select></label><label>Estimated Quantity<input name="quantity"
-                    placeholder="e.g. 500 pieces" /></label></div>
-              <label>Project Details *<textarea name="message"
-                  placeholder="Tell us about your component, material, specifications and timeline..." required=""
-                  rows="6"></textarea></label>
+                  </select>
+                </label>
+                <label for="vm-enquiry-quantity">Estimated Quantity
+                  <input id="vm-enquiry-quantity" name="quantity" placeholder="e.g. 500 pieces" aria-label="Estimated Quantity" />
+                </label>
+              </div>
+              <label for="vm-enquiry-message">Project Details *
+                <textarea id="vm-enquiry-message" name="message" placeholder="Tell us about your component, material, specifications and timeline..." required="" rows="6" aria-label="Project Details" aria-required="true"></textarea>
+              </label>
               <button class="vm-contact-submit" type="submit">Prepare Enquiry <span>↗</span></button>
               <p aria-live="polite" class="vm-contact-form-status" id="vm-contact-form-status" role="status">Your
                 enquiry will open in your email client addressed to planthead@vijayamanoharind.com. For instant
