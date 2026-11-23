@@ -2633,6 +2633,325 @@
     height: 340px;
   }
 }</style>
+
+<style id="vm-mobile-screen-optimization">
+  /* ==========================================================================
+     VMIPL Dedicated Mobile Screen View Optimization (<= 768px & <= 480px)
+     Ensures responsive typography, touch targets (WCAG 44x44px), iOS auto-zoom
+     prevention, product card visual balance, and horizontal overflow protection.
+     ========================================================================== */
+
+  /* Global Mobile Standards */
+  @media (max-width: 768px) {
+    html, body {
+      -webkit-text-size-adjust: 100% !important;
+      text-size-adjust: 100% !important;
+      overflow-x: hidden !important;
+      width: 100% !important;
+    }
+
+    #vmipl-site {
+      width: 100% !important;
+      max-width: 100vw !important;
+      overflow-x: hidden !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Interactive Elements & Touch Targets */
+    #vmipl-site a,
+    #vmipl-site button,
+    #vmipl-site input,
+    #vmipl-site select,
+    #vmipl-site textarea {
+      touch-action: manipulation;
+    }
+
+    /* Burger Menu Toggle 44x44px Target */
+    #vmipl-site .vm-menu-toggle {
+      min-width: 44px !important;
+      min-height: 44px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 10px !important;
+      cursor: pointer !important;
+    }
+
+    /* Mobile Navigation Drawer Links Sizing */
+    #vmipl-site .vm-mobile-nav-link,
+    #vmipl-site .vm-mobile-accordion-toggle {
+      min-height: 48px !important;
+      padding: 13px 18px !important;
+      font-size: 16px !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    #vmipl-site .vm-mobile-nav-action-btn {
+      min-height: 48px !important;
+      font-size: 15px !important;
+    }
+
+    /* iOS Safari Auto-Zoom Fix for Form Inputs & Form Layout */
+    #vmipl-site .vm-contact-form input,
+    #vmipl-site .vm-contact-form select,
+    #vmipl-site .vm-contact-form textarea,
+    #vmipl-site input[type="text"],
+    #vmipl-site input[type="email"],
+    #vmipl-site input[type="tel"],
+    #vmipl-site select,
+    #vmipl-site textarea {
+      font-size: 16px !important;
+      line-height: 1.4 !important;
+      min-height: 48px !important;
+      padding: 12px 14px !important;
+      border-radius: 6px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      -webkit-appearance: none !important;
+      appearance: none !important;
+    }
+
+    #vmipl-site .vm-contact-form textarea {
+      min-height: 125px !important;
+    }
+
+    #vmipl-site .vm-contact-form-card {
+      padding: 24px 18px !important;
+      border-radius: 12px !important;
+    }
+
+    #vmipl-site .vm-contact-form-row {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+
+    #vmipl-site .vm-contact-form button[type="submit"] {
+      width: 100% !important;
+      min-height: 50px !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    /* Hero Typography & Spacing on Mobile Screens */
+    #vmipl-site .vm-hero-content {
+      padding-left: 18px !important;
+      border-left: 3px solid #e5ad35 !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    #vmipl-site .vm-hero-content h1,
+    #vmipl-site .vm-subhero-inner h1 {
+      font-size: clamp(25px, 6.6vw, 36px) !important;
+      line-height: 1.22 !important;
+      margin-bottom: 12px !important;
+      word-break: break-word !important;
+    }
+
+    #vmipl-site .vm-hero-content p,
+    #vmipl-site .vm-subhero-inner p {
+      font-size: 14.5px !important;
+      line-height: 1.6 !important;
+      margin-bottom: 18px !important;
+      max-width: 100% !important;
+    }
+
+    #vmipl-site .vm-hero-btn,
+    #vmipl-site .vm-contact-hero-actions a {
+      padding: 12px 22px !important;
+      font-size: 14px !important;
+      min-height: 44px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-decoration: none !important;
+      border-radius: 4px !important;
+    }
+
+    /* Product Portfolio Split Cards Optimization */
+    #vmipl-site .vm-product-split-wrap {
+      grid-template-columns: 1fr !important;
+      gap: 22px !important;
+      padding: 0 !important;
+      margin-bottom: 36px !important;
+    }
+
+    #vmipl-site .vm-product-split-visual {
+      order: -1 !important;
+      width: 100% !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    #vmipl-site .vm-product-split-visual img {
+      height: 220px !important;
+      max-height: 240px !important;
+      width: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+
+    #vmipl-site .vm-product-scope-list {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 8px !important;
+      padding: 0 !important;
+      margin: 14px 0 20px 0 !important;
+      list-style: none !important;
+    }
+
+    #vmipl-site .vm-product-enquire-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      text-align: center !important;
+      min-height: 46px !important;
+      padding: 12px 20px !important;
+      font-size: 15px !important;
+      box-sizing: border-box !important;
+      border-radius: 4px !important;
+    }
+
+    /* Technical Specifications Table Mobile Scroll */
+    #vmipl-site div[style*="overflow-x:auto"],
+    #vmipl-site div[style*="overflow-x: auto"] {
+      -webkit-overflow-scrolling: touch !important;
+      overflow-x: auto !important;
+      border-radius: 8px !important;
+      box-shadow: inset 0 0 0 1px #dce5e3 !important;
+      margin-top: 18px !important;
+    }
+
+    #vmipl-site table {
+      min-width: 540px !important;
+      font-size: 13px !important;
+    }
+
+    #vmipl-site table th,
+    #vmipl-site table td {
+      padding: 10px 12px !important;
+      white-space: nowrap !important;
+    }
+
+    /* Why VMIPL & Facility Location on Mobile */
+    #vmipl-site .vm-why-wrap {
+      grid-template-columns: 1fr !important;
+      gap: 22px !important;
+    }
+
+    #vmipl-site .vm-why-feature {
+      min-height: auto !important;
+      padding: 28px 18px !important;
+    }
+
+    #vmipl-site .vm-why-reasons {
+      padding: 24px 18px !important;
+    }
+
+    #vmipl-site .vm-contact-location {
+      padding: 40px 16px !important;
+    }
+
+    #vmipl-site .vm-contact-map,
+    #vmipl-site .vm-contact-map iframe {
+      min-height: 270px !important;
+      height: 270px !important;
+    }
+
+    /* Careers & Modal Responsiveness */
+    #vmipl-site .vm-careers-modal-inner {
+      padding: 24px 18px !important;
+      max-width: 95% !important;
+      margin: 20px auto !important;
+    }
+  }
+
+  /* Ultra-compact Phones (<= 480px / 320px - 430px) */
+  @media (max-width: 480px) {
+    #vmipl-site .vm-hero-content {
+      padding-left: 14px !important;
+      border-left-width: 2.5px !important;
+    }
+
+    #vmipl-site .vm-hero-content h1,
+    #vmipl-site .vm-subhero-inner h1 {
+      font-size: clamp(22px, 7vw, 28px) !important;
+      line-height: 1.24 !important;
+      margin-bottom: 10px !important;
+    }
+
+    #vmipl-site .vm-hero-content p,
+    #vmipl-site .vm-subhero-inner p {
+      font-size: 14px !important;
+      line-height: 1.55 !important;
+      margin-bottom: 16px !important;
+    }
+
+    #vmipl-site .vm-contact-hero-actions {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      gap: 10px !important;
+    }
+
+    #vmipl-site .vm-contact-hero-actions a {
+      width: 100% !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+    }
+
+    #vmipl-site .vm-footer-inner {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+
+    #vmipl-site .vm-footer-bottom-inner {
+      flex-direction: column !important;
+      text-align: center !important;
+      gap: 10px !important;
+    }
+
+    #vmipl-site .vm-footer-quick-links a {
+      padding: 6px 0 !important;
+      display: inline-block !important;
+      min-height: 38px !important;
+      line-height: 1.6 !important;
+    }
+
+    #vmipl-site .vm-facility-social .vm-social-btn {
+      min-width: 44px !important;
+      min-height: 44px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    /* Floating WhatsApp Button on Compact Phones */
+    .vm-whatsapp-float {
+      bottom: 18px !important;
+      right: 16px !important;
+      width: 50px !important;
+      height: 50px !important;
+      padding: 0 !important;
+      border-radius: 50% !important;
+      justify-content: center !important;
+      z-index: 99999 !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28) !important;
+    }
+
+    .vm-whatsapp-icon {
+      width: 26px !important;
+      height: 26px !important;
+    }
+  }
+</style>
+
 </head>
 
 <body style="margin:0;padding:0;background:#10232d;">
